@@ -1,5 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://dkyj1g4j0dfa8"]
+[gd_scene load_steps=53 format=3 uid="uid://dkyj1g4j0dfa8"]
 
+[ext_resource type="Script" path="res://BlueKnight.gd" id="1_arygf"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_yemwn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54pe8"]
@@ -350,6 +351,7 @@ animations = [{
 size = Vector2(31, 15)
 
 [node name="KnightBlue" type="CharacterBody2D"]
+script = ExtResource("1_arygf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7yotu")
@@ -358,3 +360,13 @@ sprite_frames = SubResource("SpriteFrames_7yotu")
 y_sort_enabled = true
 position = Vector2(0.5, 26.5)
 shape = SubResource("RectangleShape2D_kdt7i")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = -129.0
+offset_right = 32.0
+offset_bottom = -46.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "."

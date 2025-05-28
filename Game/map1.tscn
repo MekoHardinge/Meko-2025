@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=45 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="2_flypv"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="19_sqxea"]
 [ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="20_can02"]
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
+[ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7100"]
 texture = ExtResource("1_cdurm")
@@ -305,6 +306,8 @@ sources/18 = SubResource("TileSetAtlasSource_e88ej")
 sources/19 = SubResource("TileSetAtlasSource_tma82")
 sources/20 = SubResource("TileSetAtlasSource_4uwnr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqguj"]
+
 [node name="Map1" type="Node2D"]
 
 [node name="Terrain" type="TileMap" parent="."]
@@ -317,4 +320,13 @@ layer_1/tile_data = PackedInt32Array(196619, 8, 0, 327694, 8, 0, 393223, 8, 0, 1
 [node name="Decorations" type="TileMap" parent="Terrain"]
 format = 2
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("21_44ykt")]
+[node name="KnightBlue" parent="." instance=ExtResource("21_44ykt")]
+position = Vector2(288, 163)
+
+[node name="RTS-Node" type="Node2D" parent="."]
+script = ExtResource("22_fop6k")
+
+[node name="SelectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea"]
+shape = SubResource("RectangleShape2D_wqguj")
