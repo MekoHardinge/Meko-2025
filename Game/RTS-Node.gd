@@ -47,8 +47,16 @@ func _select_units():
 	
 	var units = get_tree().get_nodes_in_group("unit")
 	
+	for body in selection_area.get_overlapping_bodies():
+		if body in get_tree().get_nodes_in_group("unit"):
+			body.selected = true
+			units.erase(body)
+			
+	for body in units:
+		body.selected = false
+	
 func _get_rect_start_position():
-	var newPosition
+	var newPosition = Vector2()
 	var mousePosition = get_global_mouse_position()
 	
 	if selectionStartPoint.x < mousePosition.x:
