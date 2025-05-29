@@ -321,7 +321,7 @@ layer_1/tile_data = PackedInt32Array(196619, 8, 0, 327694, 8, 0, 393223, 8, 0, 1
 format = 2
 
 [node name="KnightBlue" parent="." instance=ExtResource("21_44ykt")]
-position = Vector2(288, 163)
+position = Vector2(392, 185)
 
 [node name="RTS-Node" type="Node2D" parent="."]
 script = ExtResource("22_fop6k")
