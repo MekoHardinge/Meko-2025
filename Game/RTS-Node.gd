@@ -1,70 +1,59 @@
 extends Node2D
 
-@onready var selection_area = $"../SelectionArea"
-@onready var collision_shape_2d = $"../SelectionArea/CollisionShape2D"
-
 var selectionStartPoint = Vector2.ZERO
+var leftMousePressed = false
+var leftMouseReleased = false
+var leftMouseLongPressed = false
+
+@onready var long_left_click_timer = $LongLeftClickTimer
+
+func _ready():
+	long_left_click_timer.timeout.connect(_on_long_left_click_timer_timeout)
 
 func _input(event):
-	if (selectionStartPoint == Vector2.ZERO && event is InputEventMouseButton
-		&& event.button_index == 1 && event.is_pressed()):
-			selectionStartPoint = get_global_mouse_position()
-	elif (selectionStartPoint != Vector2.ZERO && event is InputEventMouseButton
-		&& event.button_index == 1):
-			_select_units()
-			selectionStartPoint = Vector2.ZERO
-
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.is_pressed():
+			leftMousePressed = true
+			long_left_click_timer.start()
+		else:
+			leftMouseReleased = true
+			long_left_click_timer.stop()
+			leftMouseLongPressed = false
 
 func _process(delta):
+	if leftMouseLongPressed and selectionStartPoint == Vector2.ZERO:
+		selectionStartPoint = get_global_mouse_position()
+	elif leftMouseReleased:
+		if selectionStartPoint != Vector2.ZERO:
+			_select_units()
+			selectionStartPoint = Vector2.ZERO
+		else:
+			_set_move_target()
+
 	queue_redraw()
+	leftMousePressed = false
+	leftMouseReleased = false
 
 func _draw():
-	if selectionStartPoint == Vector2.ZERO: return
-	
-	var mousePosition = get_global_mouse_position()
-	var startX = selectionStartPoint.x
-	var startY = selectionStartPoint.y
-	var endX = mousePosition.x
-	var endY = mousePosition.y
-	
-	var lineWidth = 3.0
-	var lineColor = Color.WHITE
-	
-	draw_line(Vector2(startX,startY), Vector2(endX, startY), lineColor, lineWidth)
-	draw_line(Vector2(startX,startY), Vector2(startX, endY), lineColor, lineWidth)
-	draw_line(Vector2(endX,startY), Vector2(endX, endY), lineColor, lineWidth)
-	draw_line(Vector2(startX,endY), Vector2(endX, endY), lineColor, lineWidth)
+	if selectionStartPoint == Vector2.ZERO:
+		return
+
+	var mousePos = get_global_mouse_position()
+	var rect = Rect2(selectionStartPoint, mousePos - selectionStartPoint).abs()
+	draw_rect(rect, Color(1, 1, 1, 0), false, 2.0)
 
 func _select_units():
-	var size = abs(get_global_mouse_position() - selectionStartPoint)
-	
-	var areaPosition  = _get_rect_start_position()
-	selection_area.global_position = areaPosition
-	collision_shape_2d.global_position = areaPosition + size / 2
-	collision_shape_2d.shape.size = size
-	
-	await get_tree().create_timer(0.04).timeout
-	
+	var mousePos = get_global_mouse_position()
+	var rect = Rect2(selectionStartPoint, mousePos - selectionStartPoint).abs()
 	var units = get_tree().get_nodes_in_group("unit")
-	
-	for body in selection_area.get_overlapping_bodies():
-		if body in get_tree().get_nodes_in_group("unit"):
-			body.selected = true
-			units.erase(body)
-			
-	for body in units:
-		body.selected = false
-	
-func _get_rect_start_position():
-	var newPosition = Vector2()
-	var mousePosition = get_global_mouse_position()
-	
-	if selectionStartPoint.x < mousePosition.x:
-		newPosition.x = selectionStartPoint.x
-	else: newPosition.x = mousePosition.x
-	
-	if selectionStartPoint.y < mousePosition.y:
-		newPosition.y = selectionStartPoint.y
-	else: newPosition.y = mousePosition.y
-	
-	return newPosition
+
+	for unit in units:
+		unit.selected = rect.has_point(unit.global_position)
+
+func _set_move_target():
+	for unit in get_tree().get_nodes_in_group("unit"):
+		if unit.selected:
+			unit.set_target_position(get_global_mouse_position())
+
+func _on_long_left_click_timer_timeout():
+	leftMouseLongPressed = true
