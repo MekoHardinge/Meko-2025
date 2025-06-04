@@ -532,7 +532,7 @@ position = Vector2(455, 277)
 position = Vector2(370, 229)
 
 [node name="KnightBlue3" parent="." instance=ExtResource("21_44ykt")]
-position = Vector2(371, 326)
+position = Vector2(396, 357)
 
 [node name="RTS-Node" type="Node2D" parent="."]
 script = ExtResource("22_fop6k")
