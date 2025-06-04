@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=54 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -26,6 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="26_88kjh"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_uwmk6"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(124, 121, 2583, 110, 2569, 528, 114, 528)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
 texture = ExtResource("1_n1504")
@@ -495,7 +499,10 @@ size = Vector2(1152, 18)
 [node name="Map1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [0.0]
 
-[node name="Terrain" type="TileMap" parent="."]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_uwmk6")
+
+[node name="Terrain" type="TileMap" parent="NavigationRegion2D"]
 tile_set = SubResource("TileSet_spq7y")
 rendering_quadrant_size = 64
 format = 2
@@ -517,13 +524,8 @@ layer_7/name = "Cliff grass"
 layer_7/tile_data = PackedInt32Array(65559, 65537, 0, 65560, 65537, 0, 65557, 1, 3, 65562, 131073, 3, 131097, 131073, 2, 131094, 1, 2, 196631, 1, 2, 196632, 131073, 2, 65558, 65537, 0, 65561, 65537, 0, 131095, 65537, 1, 131096, 65537, 1)
 layer_8/tile_data = PackedInt32Array()
 
-[node name="Decorations" type="TileMap" parent="Terrain"]
+[node name="Decorations" type="TileMap" parent="NavigationRegion2D/Terrain"]
 format = 2
-
-[node name="SelectionArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea"]
-shape = SubResource("RectangleShape2D_wqguj")
 
 [node name="KnightBlue2" parent="." instance=ExtResource("21_44ykt")]
 position = Vector2(455, 277)
@@ -537,6 +539,15 @@ position = Vector2(396, 357)
 [node name="RTS-Node" type="Node2D" parent="."]
 script = ExtResource("22_fop6k")
 
+[node name="SelectionArea" type="Area2D" parent="RTS-Node"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RTS-Node/SelectionArea"]
+shape = SubResource("RectangleShape2D_wqguj")
+
+[node name="LongLeftClickTimer" type="Timer" parent="RTS-Node"]
+wait_time = 0.1
+one_shot = true
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(576, -9)
 script = ExtResource("26_88kjh")
@@ -547,3 +558,5 @@ position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_c4tfc")
+
+[connection signal="timeout" from="RTS-Node/LongLeftClickTimer" to="RTS-Node" method="_on_long_left_click_timer_timeout"]
