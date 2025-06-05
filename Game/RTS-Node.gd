@@ -1,59 +1,62 @@
 extends Node2D
 
-var selectionStartPoint = Vector2.ZERO
-var leftMousePressed = false
-var leftMouseReleased = false
-var leftMouseLongPressed = false
+var selection_start = Vector2.ZERO
+var selection_end = Vector2.ZERO
+var is_selecting = false
+var left_mouse_held = false
 
 @onready var long_left_click_timer = $LongLeftClickTimer
+@onready var selection_area = $SelectionArea
 
 func _ready():
 	long_left_click_timer.timeout.connect(_on_long_left_click_timer_timeout)
 
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.is_pressed():
-			leftMousePressed = true
-			long_left_click_timer.start()
-		else:
-			leftMouseReleased = true
-			long_left_click_timer.stop()
-			leftMouseLongPressed = false
+	if event is InputEventMouseButton:
+		# Handle left click for selection
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				left_mouse_held = true
+				long_left_click_timer.start()
+			else:
+				left_mouse_held = false
+				long_left_click_timer.stop()
 
-func _process(delta):
-	if leftMouseLongPressed and selectionStartPoint == Vector2.ZERO:
-		selectionStartPoint = get_global_mouse_position()
-	elif leftMouseReleased:
-		if selectionStartPoint != Vector2.ZERO:
-			_select_units()
-			selectionStartPoint = Vector2.ZERO
-		else:
-			_set_move_target()
+				if is_selecting:
+					_select_units()
+					is_selecting = false
+					selection_start = Vector2.ZERO
+					selection_end = Vector2.ZERO
 
+		# Handle right click for movement
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			_issue_move_command(get_global_mouse_position())
+
+func _process(_delta):
+	if is_selecting:
+		selection_end = get_global_mouse_position()
 	queue_redraw()
-	leftMousePressed = false
-	leftMouseReleased = false
 
 func _draw():
-	if selectionStartPoint == Vector2.ZERO:
-		return
-
-	var mousePos = get_global_mouse_position()
-	var rect = Rect2(selectionStartPoint, mousePos - selectionStartPoint).abs()
-	draw_rect(rect, Color(1, 1, 1, 0), false, 2.0)
-
-func _select_units():
-	var mousePos = get_global_mouse_position()
-	var rect = Rect2(selectionStartPoint, mousePos - selectionStartPoint).abs()
-	var units = get_tree().get_nodes_in_group("unit")
-
-	for unit in units:
-		unit.selected = rect.has_point(unit.global_position)
-
-func _set_move_target():
-	for unit in get_tree().get_nodes_in_group("unit"):
-		if unit.selected:
-			unit.set_target_position(get_global_mouse_position())
+	if is_selecting:
+		var rect = Rect2(selection_start, selection_end - selection_start).abs()
+		draw_rect(rect, Color(0.3, 0.6, 1.0, 0.2), true)  # Fill
+		draw_rect(rect, Color(1, 1, 1), false, 1.5)       # Border
 
 func _on_long_left_click_timer_timeout():
-	leftMouseLongPressed = true
+	if left_mouse_held:
+		is_selecting = true
+		selection_start = get_global_mouse_position()
+		selection_end = selection_start
+
+func _select_units():
+	var rect = Rect2(selection_start, selection_end - selection_start).abs()
+	for unit in get_tree().get_nodes_in_group("unit"):
+		var is_inside = rect.has_point(unit.global_position)
+		unit.selected = is_inside
+		print("Selecting ", unit.name, " → ", is_inside)
+
+func _issue_move_command(position: Vector2):
+	for unit in get_tree().get_nodes_in_group("unit"):
+		if unit.selected:
+			unit.set_target_position(position)

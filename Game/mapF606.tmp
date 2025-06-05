@@ -527,7 +527,6 @@ layer_8/tile_data = PackedInt32Array()
 format = 2
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
 [node name="KnightBlue2" parent="." instance=ExtResource("21_44ykt")]

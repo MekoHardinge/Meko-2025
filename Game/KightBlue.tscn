@@ -360,6 +360,7 @@ sprite_frames = SubResource("SpriteFrames_7yotu")
 y_sort_enabled = true
 position = Vector2(0.5, 26.5)
 shape = SubResource("RectangleShape2D_kdt7i")
+disabled = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = -8.0
