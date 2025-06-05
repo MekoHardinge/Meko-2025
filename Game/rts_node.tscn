@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcxhk2uu5qxos"]
+
+[ext_resource type="Script" path="res://RTS-Node.gd" id="1_vuue2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqguj"]
+
+[node name="RTS-Node" type="Node2D"]
+script = ExtResource("1_vuue2")
+
+[node name="LongLeftClickTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="SelectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea"]
+shape = SubResource("RectangleShape2D_wqguj")
+
+[connection signal="timeout" from="LongLeftClickTimer" to="." method="_on_long_left_click_timer_timeout"]

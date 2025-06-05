@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var label = $Label
 @onready var navigation_agent_2d = $NavigationAgent2D
+@onready var animated_sprite = $AnimatedSprite2D
 
 const SPEED = 100.0
 var selected = false
@@ -26,6 +27,14 @@ func _physics_process(_delta):
 	# Apply movement correctly for CharacterBody2D
 	velocity = move_velocity
 	move_and_slide()
+
+	# Animation switching logic (added only this part)
+	if move_velocity.length() > 1:
+		if animated_sprite.animation != "Walk":
+			animated_sprite.play("Walk")
+	else:
+		if animated_sprite.animation != "Idle":
+			animated_sprite.play("Idle")
 
 func _on_velocity_computed(safe_velocity):
 	move_velocity = safe_velocity

@@ -1,7 +1,55 @@
-[gd_scene load_steps=53 format=3 uid="uid://dkyj1g4j0dfa8"]
+[gd_scene load_steps=65 format=3 uid="uid://dkyj1g4j0dfa8"]
 
 [ext_resource type="Script" path="res://BlueKnight.gd" id="1_arygf"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_yemwn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu8wb"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyf7u"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rofjl"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm2my"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65oj"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvuxh"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x252g"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8scd"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcq6b"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh0vj"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t3wd"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuokl"]
+atlas = ExtResource("1_yemwn")
+region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54pe8"]
 atlas = ExtResource("1_yemwn")
@@ -199,6 +247,52 @@ region = Rect2(960, 1344, 192, 192)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yu8wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyf7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rofjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm2my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvuxh")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x252g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8scd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcq6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh0vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t3wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuokl")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_54pe8")
 }, {
 "duration": 1.0,
@@ -344,7 +438,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ydvo"]
@@ -358,13 +452,11 @@ script = ExtResource("1_arygf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_7yotu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-y_sort_enabled = true
-position = Vector2(0, 11)
-shape = SubResource("CapsuleShape2D_0ydvo")
+animation = &"Walk"
+frame_progress = 0.462911
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -8.0
 offset_top = -129.0
 offset_right = 32.0
@@ -379,5 +471,11 @@ path_desired_distance = 100.0
 target_desired_distance = 100.0
 avoidance_enabled = true
 radius = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_0ydvo")
 
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]

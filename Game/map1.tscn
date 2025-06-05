@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dtr7er77txmnp"]
+[gd_scene load_steps=54 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
