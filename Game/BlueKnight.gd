@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var label = $Label
 @onready var navigation_agent_2d = $NavigationAgent2D
 
-const SPEED = 200.0
+const SPEED = 100.0
 var selected = false
 var move_velocity = Vector2.ZERO
 

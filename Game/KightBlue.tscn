@@ -347,20 +347,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdt7i"]
-size = Vector2(31, 15)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ydvo"]
+radius = 25.0
+height = 50.0
 
 [node name="KnightBlue" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_arygf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_7yotu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0.5, 26.5)
-shape = SubResource("RectangleShape2D_kdt7i")
-disabled = true
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_0ydvo")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -8.0
@@ -373,8 +375,8 @@ theme_override_font_sizes/font_size = 60
 text = "."
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 40.0
-target_desired_distance = 40.0
+path_desired_distance = 100.0
+target_desired_distance = 100.0
 avoidance_enabled = true
 radius = 40.0
 
