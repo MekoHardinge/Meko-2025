@@ -453,7 +453,7 @@ script = ExtResource("1_arygf")
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_7yotu")
 animation = &"Walk"
-frame_progress = 0.462911
+frame_progress = 0.774632
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -467,10 +467,12 @@ theme_override_font_sizes/font_size = 60
 text = "."
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 100.0
-target_desired_distance = 100.0
+path_desired_distance = 30.0
+target_desired_distance = 30.0
+path_max_distance = 300.0
 avoidance_enabled = true
-radius = 40.0
+radius = 60.0
+debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

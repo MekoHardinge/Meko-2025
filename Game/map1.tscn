@@ -488,9 +488,9 @@ sources/21 = SubResource("TileSetAtlasSource_tuvb0")
 sources/22 = SubResource("TileSetAtlasSource_dlr25")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uwmk6"]
-vertices = PackedVector2Array(2575, 547, 49, 589, 73, 66, 2608, 58)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(64, 57, 2619, 48, 2585, 557, 39, 600)])
+vertices = PackedVector2Array(1180, 366, 1263, 263, 1317, 261, 1316, 329, 1235, 429, 1181, 422, 1567, 139, 2297, 139, 2286, 499, 1567, 203, 838, 481, 125, 494, 127, 140, 843, 435, 1512, 259, 1512, 203, 1113, 297, 1206, 201, 1260, 200, 1127, 359, 1239, 490, 1450, 328, 960, 299, 1198, 140, 1451, 267, 956, 355, 902, 368, 894, 421)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(14, 15, 9, 8), PackedInt32Array(16, 17, 18, 1, 0, 19), PackedInt32Array(8, 20, 4, 3, 21), PackedInt32Array(22, 12, 23, 17, 16), PackedInt32Array(21, 24, 14, 8), PackedInt32Array(22, 25, 26, 12), PackedInt32Array(26, 27, 13, 12)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(847.74, 491.408, 852.25, 443.27, 902.753, 430.233, 910.87, 376.078, 965.883, 364.043, 969.49, 308.885, 1104.77, 306.88, 1119.2, 369.058, 1169.7, 375.075, 1172.41, 432.239, 1225.62, 438.256, 1230.13, 500.434, 2296.11, 510.463, 2306.94, 129.371, 1556.6, 129.371, 1556.6, 192.552, 1502.48, 192.552, 1502.48, 249.716, 1442.06, 258.742, 1440.26, 317.911, 1325.72, 318.914, 1328.43, 250.719, 1272.51, 252.724, 1269.81, 189.543, 1214.79, 190.546, 1206.68, 130.374, 117.241, 130.374, 115.437, 505.449)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqguj"]
@@ -527,7 +527,6 @@ layer_8/tile_data = PackedInt32Array()
 format = 2
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
