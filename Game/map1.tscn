@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=55 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="20_can02"]
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
+[ext_resource type="PackedScene" uid="uid://d1gd82e1vlxgv" path="res://goblin.tscn" id="25_tpdc5"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="26_88kjh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
@@ -530,6 +531,9 @@ format = 2
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
+[node name="Goblin2" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(878, 306)
+
 [node name="KnightBlue2" parent="." instance=ExtResource("21_44ykt")]
 position = Vector2(455, 277)
 
@@ -538,6 +542,12 @@ position = Vector2(370, 229)
 
 [node name="KnightBlue3" parent="." instance=ExtResource("21_44ykt")]
 position = Vector2(396, 357)
+
+[node name="Goblin3" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(764, 244)
+
+[node name="Goblin" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(768, 398)
 
 [node name="RTS-Node" type="Node2D" parent="."]
 script = ExtResource("22_fop6k")
