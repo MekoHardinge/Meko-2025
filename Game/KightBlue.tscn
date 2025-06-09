@@ -731,6 +731,7 @@ height = 50.0
 radius = 66.0681
 
 [node name="KnightBlue" type="CharacterBody2D"]
+z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_arygf")
 
