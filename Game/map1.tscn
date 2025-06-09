@@ -573,4 +573,7 @@ script = ExtResource("26_88kjh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_c4tfc")
 
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(354, 749, 544, 751, 549, 954, 346, 973)
+
 [connection signal="timeout" from="RTS-Node/LongLeftClickTimer" to="RTS-Node" method="_on_long_left_click_timer_timeout"]
