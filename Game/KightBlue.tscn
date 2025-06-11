@@ -752,10 +752,13 @@ theme_override_font_sizes/font_size = 60
 text = "."
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 100.0
+path_desired_distance = 500.0
 target_desired_distance = 30.0
 path_max_distance = 300.0
-radius = 5.0
+avoidance_enabled = true
+neighbor_distance = 2346.4
+max_neighbors = 12
+max_speed = 100.6
 debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -767,5 +770,8 @@ shape = SubResource("CapsuleShape2D_0ydvo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 shape = SubResource("CircleShape2D_m1ljs")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(-33, -40, 37, -39, 35, 43, -37, 43)
 
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
