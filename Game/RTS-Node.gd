@@ -48,12 +48,42 @@ func _input(event):
 func _draw():
 	if is_selecting:
 		var r = Rect2(sel_start, sel_end - sel_start).abs()
-		draw_rect(r, Color(0.3,0.6,1,0.2), true)
-		draw_rect(r, Color(1,1,1), false, 2)
+		draw_rect(r, Color(0.3, 0.6, 1, 0.2), true)
+		draw_rect(r, Color(1, 1, 1), false, 2)
+
 	if is_forming:
 		var r2 = Rect2(form_start, form_end - form_start).abs()
-		draw_rect(r2, Color(1,0.6,0.2,0.2), true)
-		draw_rect(r2, Color(1,0.5,0), false, 2)
+		draw_rect(r2, Color(1, 0.6, 0.2, 0.2), true)
+		draw_rect(r2, Color(1, 0.5, 0), false, 2)
+
+		for ctrl in get_tree().get_nodes_in_group("unit_controller"):
+			if ctrl.selected:
+				_draw_unit_preview(ctrl, r2)
+
+	# Draw permanent formation targets for selected units
+	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
+		if ctrl.selected and ctrl.last_formation_rect.size != Vector2.ZERO:
+			_draw_unit_preview(ctrl, ctrl.last_formation_rect)
+
+func _draw_unit_preview(ctrl, rect):
+	var cnt = ctrl.knights.size()
+	if cnt == 0:
+		return
+
+	var cols = int(ceil(sqrt(cnt)))
+	var rows = int(ceil(cnt / float(cols)))
+	var cell_w = rect.size.x / cols
+	var cell_h = rect.size.y / rows
+
+	for i in range(cnt):
+		var row = i / cols
+		var col = i % cols
+		var target = rect.position + Vector2(
+			col * cell_w + cell_w * 0.5,
+			row * cell_h + cell_h * 0.5
+		)
+		draw_circle(target, 5, Color(1, 1, 0.3, 0.8))  # light yellow
+
 
 func _select_units():
 	var r = Rect2(sel_start, sel_end - sel_start).abs()

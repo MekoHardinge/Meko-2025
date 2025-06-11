@@ -753,7 +753,7 @@ text = "."
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 500.0
-target_desired_distance = 30.0
+target_desired_distance = 50.0
 path_max_distance = 300.0
 avoidance_enabled = true
 neighbor_distance = 2346.4

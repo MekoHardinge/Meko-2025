@@ -1,10 +1,12 @@
 # UnitController.gd
+
 extends Node2D
 
-@export var spacing := 64
+@export var spacing := 32
 
 var selected := false
 var knights: Array[CharacterBody2D] = []
+var last_formation_rect: Rect2 = Rect2()  # << Add this
 
 func _ready():
 	add_to_group("unit_controller")
@@ -12,19 +14,15 @@ func _ready():
 		if child is CharacterBody2D:
 			knights.append(child)
 
-# Called by RTSController when you drag‐release the formation rectangle
-func form_to_rect(rect: Rect2) -> void:
-	if not selected or knights.is_empty():
+func form_to_rect(rect: Rect2):
+	var cnt = knights.size()
+	if cnt == 0:
 		return
 
-	var cnt = knights.size()
-	# Compute formation grid based on rectangle aspect ratio
-	var aspect = rect.size.x / rect.size.y
-	# More columns if rectangle is wide, more rows if tall
-	var cols = int(ceil(sqrt(cnt * aspect)))
-	var rows = int(ceil(cnt / float(cols)))
+	last_formation_rect = rect  # << Store it
 
-	# Calculate each cell size within the rect
+	var cols = int(ceil(sqrt(cnt)))
+	var rows = int(ceil(cnt / float(cols)))
 	var cell_w = rect.size.x / cols
 	var cell_h = rect.size.y / rows
 

@@ -18,7 +18,7 @@ var time_since_repath = 0.0
 func _ready():
 	add_to_group("unit")
 	nav.max_speed = SPEED
-	nav.target_desired_distance = 4.0
+	nav.target_desired_distance = 10.0
 	nav.path_desired_distance = 4.0
 	nav.avoidance_enabled = true
 
