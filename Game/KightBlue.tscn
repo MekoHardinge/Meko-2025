@@ -755,7 +755,6 @@ text = "."
 path_desired_distance = 100.0
 target_desired_distance = 30.0
 path_max_distance = 300.0
-avoidance_enabled = true
 radius = 5.0
 debug_enabled = true
 
@@ -768,8 +767,5 @@ shape = SubResource("CapsuleShape2D_0ydvo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 shape = SubResource("CircleShape2D_m1ljs")
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-vertices = PackedVector2Array(-9, -27, 36, -26, 34, 46, -41, 43, -31, -47, 36, -46)
 
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
