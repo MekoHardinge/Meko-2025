@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=57 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
 [ext_resource type="PackedScene" uid="uid://d1gd82e1vlxgv" path="res://goblin.tscn" id="25_tpdc5"]
+[ext_resource type="PackedScene" uid="uid://cngxwalac0lb6" path="res://knightRed.tscn" id="26_7jyq4"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="26_88kjh"]
 [ext_resource type="Script" path="res://KnightUnit.gd" id="27_dr8ji"]
 
@@ -550,39 +551,51 @@ position = Vector2(2094, 536)
 position = Vector2(888, 888)
 script = ExtResource("27_dr8ji")
 
-[node name="KnightBlue" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(-11, -223)
+[node name="KnightRed4" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(18, 15)
 
-[node name="KnightBlue2" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(74, -175)
+[node name="KnightRed5" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(-48, -174)
 
-[node name="KnightBlue3" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(15, -95)
+[node name="KnightRed6" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(-42, 165)
 
-[node name="KnightBlue4" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(0, 59)
+[node name="KnightRed3" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(111, 138)
 
-[node name="KnightBlue5" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(-85, 11)
+[node name="KnightRed7" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(86, -477)
 
-[node name="KnightBlue6" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(-59, 139)
+[node name="KnightRed8" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(-16, -331)
 
-[node name="KnightBlue7" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(22, 355)
+[node name="KnightRed10" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(69, 401)
 
-[node name="KnightBlue8" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(-63, 307)
+[node name="KnightRed9" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(134, -304)
 
-[node name="KnightBlue9" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(-37, 435)
+[node name="KnightRed11" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(240, -288)
 
-[node name="KnightBlue10" parent="KnightUnitRed" instance=ExtResource("21_44ykt")]
-position = Vector2(52, 203)
+[node name="KnightRed12" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(351, -150)
+
+[node name="KnightRed2" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(120, -144)
+
+[node name="KnightRed" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
+position = Vector2(231, -6)
 
 [node name="KnightUnitBlue" type="Node2D" parent="."]
 position = Vector2(444, 444)
 script = ExtResource("27_dr8ji")
+
+[node name="KnightBlue11" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
+position = Vector2(237, -176)
+
+[node name="KnightBlue12" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
+position = Vector2(164, 32)
 
 [node name="KnightBlue" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
 position = Vector2(-11, -223)
