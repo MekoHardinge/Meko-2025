@@ -70,8 +70,11 @@ func _draw_unit_preview(ctrl, rect):
 	if cnt == 0:
 		return
 
-	var cols = int(ceil(sqrt(cnt)))
-	var rows = int(ceil(cnt / float(cols)))
+	# Use the same adaptive grid calc
+	var grid = ctrl.get_adaptive_grid(cnt, rect.size)
+	var cols = grid.x
+	var rows = grid.y
+
 	var cell_w = rect.size.x / cols
 	var cell_h = rect.size.y / rows
 
@@ -82,7 +85,7 @@ func _draw_unit_preview(ctrl, rect):
 			col * cell_w + cell_w * 0.5,
 			row * cell_h + cell_h * 0.5
 		)
-		draw_circle(target, 5, Color(1, 1, 0.3, 0.8))  # light yellow
+		draw_circle(target, 5, Color(1, 1, 0.3, 0.8))
 
 
 func _select_units():

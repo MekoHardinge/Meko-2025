@@ -759,7 +759,6 @@ avoidance_enabled = true
 neighbor_distance = 2346.4
 max_neighbors = 12
 max_speed = 100.6
-debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

@@ -546,25 +546,6 @@ position = Vector2(2090, 382)
 [node name="Goblin" parent="." instance=ExtResource("25_tpdc5")]
 position = Vector2(2094, 536)
 
-[node name="RTS-Node" type="Node2D" parent="."]
-script = ExtResource("22_fop6k")
-
-[node name="LongLeftClickTimer" type="Timer" parent="RTS-Node"]
-wait_time = 0.1
-one_shot = true
-
-[node name="SelectionArea" type="Area2D" parent="RTS-Node"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RTS-Node/SelectionArea"]
-shape = SubResource("RectangleShape2D_wqguj")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(576, -9)
-script = ExtResource("26_88kjh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_c4tfc")
-
 [node name="KnightUnit" type="Node2D" parent="."]
 position = Vector2(444, 444)
 script = ExtResource("27_dr8ji")
@@ -598,5 +579,24 @@ position = Vector2(-37, 435)
 
 [node name="KnightBlue10" parent="KnightUnit" instance=ExtResource("21_44ykt")]
 position = Vector2(52, 203)
+
+[node name="RTS-Node" type="Node2D" parent="."]
+script = ExtResource("22_fop6k")
+
+[node name="LongLeftClickTimer" type="Timer" parent="RTS-Node"]
+wait_time = 0.1
+one_shot = true
+
+[node name="SelectionArea" type="Area2D" parent="RTS-Node"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RTS-Node/SelectionArea"]
+shape = SubResource("RectangleShape2D_wqguj")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(576, -9)
+script = ExtResource("26_88kjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_c4tfc")
 
 [connection signal="timeout" from="RTS-Node/LongLeftClickTimer" to="RTS-Node" method="_on_long_left_click_timer_timeout"]
