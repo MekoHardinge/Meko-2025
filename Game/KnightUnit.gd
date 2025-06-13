@@ -12,25 +12,14 @@ func _ready():
 		if child is CharacterBody2D:
 			knights.append(child)
 
-func get_adaptive_grid(cnt: int, size: Vector2) -> Vector2i:
-	if cnt == 0:
-		return Vector2i(0, 0)
+# Compute columns and rows based on both unit count and rect shape
+func get_grid_by_rect(unit_count: int, size: Vector2) -> Vector2i:
+	if size.y == 0:
+		return Vector2i(unit_count, 1)
 
-	# Avoid division by zero by clamping height
-	var height = size.y
-	if height < 0.01:
-		height = 0.01
-
-	var aspect_ratio = size.x / height
-	var rows = int(round(sqrt(cnt / aspect_ratio)))
-	rows = max(rows, 1)
-
-	var cols = int(ceil(cnt / rows))
-
-	while cols / rows > aspect_ratio * 1.1:
-		rows += 1
-		cols = int(ceil(cnt / rows))
-
+	var ratio = size.x / size.y
+	var cols = clamp(int(round(sqrt(unit_count * ratio))), 1, unit_count)
+	var rows = int(ceil(unit_count / float(cols)))
 	return Vector2i(cols, rows)
 
 func form_to_rect(rect: Rect2):
@@ -40,10 +29,9 @@ func form_to_rect(rect: Rect2):
 
 	last_formation_rect = rect
 
-	var grid = get_adaptive_grid(cnt, rect.size)
+	var grid = get_grid_by_rect(cnt, rect.size)
 	var cols = grid.x
 	var rows = grid.y
-
 	var cell_w = rect.size.x / cols
 	var cell_h = rect.size.y / rows
 

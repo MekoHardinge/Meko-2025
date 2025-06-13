@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://cngxwalac0lb6"]
+[gd_scene load_steps=67 format=3 uid="uid://ckfdt4pk6ssyc"]
 
 [ext_resource type="Script" path="res://BlueKnight.gd" id="1_wnjhh"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_cs6pw"]
@@ -507,6 +507,7 @@ avoidance_enabled = true
 neighbor_distance = 2346.4
 max_neighbors = 12
 max_speed = 100.6
+debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

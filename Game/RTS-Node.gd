@@ -1,4 +1,3 @@
-# RTSController.gd
 extends Node2D
 
 var sel_start      = Vector2.ZERO
@@ -56,37 +55,72 @@ func _draw():
 		draw_rect(r2, Color(1, 0.6, 0.2, 0.2), true)
 		draw_rect(r2, Color(1, 0.5, 0), false, 2)
 
+		var selected_units = []
 		for ctrl in get_tree().get_nodes_in_group("unit_controller"):
 			if ctrl.selected:
-				_draw_unit_preview(ctrl, r2)
+				selected_units.append(ctrl)
+		
+		var unit_count = selected_units.size()
+		if unit_count == 0:
+			return
+
+		var aspect = r2.size.x / r2.size.y if r2.size.y != 0 else 1.0
+
+		if aspect >= 1.0:
+			# Wide rectangle: lay units horizontally
+			var unit_width = r2.size.x / unit_count
+			for i in range(unit_count):
+				var unit_rect = Rect2(
+					r2.position.x + i * unit_width,
+					r2.position.y,
+					unit_width,
+					r2.size.y
+				)
+				_draw_unit_preview(selected_units[i], unit_rect)
+		else:
+			# Tall rectangle: lay units vertically
+			var unit_height = r2.size.y / unit_count
+			for i in range(unit_count):
+				var unit_rect = Rect2(
+					r2.position.x,
+					r2.position.y + i * unit_height,
+					r2.size.x,
+					unit_height
+				)
+				_draw_unit_preview(selected_units[i], unit_rect)
 
 	# Draw permanent formation targets for selected units
 	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
-		if ctrl.selected and ctrl.last_formation_rect.size != Vector2.ZERO:
+		if ctrl.selected and ctrl.has_method("last_formation_rect") and ctrl.last_formation_rect.size != Vector2.ZERO:
 			_draw_unit_preview(ctrl, ctrl.last_formation_rect)
-
 func _draw_unit_preview(ctrl, rect):
 	var cnt = ctrl.knights.size()
 	if cnt == 0:
 		return
 
-	# Use the same adaptive grid calc
-	var grid = ctrl.get_adaptive_grid(cnt, rect.size)
-	var cols = grid.x
-	var rows = grid.y
+	# Calculate aspect ratio safely
+	var aspect_ratio = rect.size.x / rect.size.y if rect.size.y != 0 else 1.0
 
+	# Calculate rows based on aspect ratio and count
+	var rows = int(ceil(sqrt(cnt / aspect_ratio)))
+	if rows < 1:
+		rows = 1
+
+	# Calculate columns based on rows and count
+	var cols = int(ceil(cnt / float(rows)))
+
+	# Cell size to fill the rect fully
 	var cell_w = rect.size.x / cols
 	var cell_h = rect.size.y / rows
 
-	for i in range(cnt):
-		var row = i / cols
-		var col = i % cols
-		var target = rect.position + Vector2(
-			col * cell_w + cell_w * 0.5,
-			row * cell_h + cell_h * 0.5
-		)
-		draw_circle(target, 5, Color(1, 1, 0.3, 0.8))
-
+	var unit_index = 0
+	for row in range(rows):
+		var units_this_row = min(cols, cnt - unit_index)
+		for col in range(units_this_row):
+			var x = rect.position.x + col * cell_w + cell_w * 0.5
+			var y = rect.position.y + row * cell_h + cell_h * 0.5
+			draw_circle(Vector2(x, y), 5, Color(1, 1, 0.3, 0.8))
+			unit_index += 1
 
 func _select_units():
 	var r = Rect2(sel_start, sel_end - sel_start).abs()
@@ -99,6 +133,36 @@ func _select_units():
 				break
 
 func _form_units(rect: Rect2):
+	var selected_units = []
 	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
 		if ctrl.selected:
-			ctrl.form_to_rect(rect)
+			selected_units.append(ctrl)
+	var unit_count = selected_units.size()
+	if unit_count == 0:
+		return
+
+	var aspect = rect.size.x / rect.size.y if rect.size.y != 0 else 1.0
+
+	if aspect >= 1.0:
+		# Wide rectangle: split horizontally
+		var unit_width = rect.size.x / unit_count
+		for i in range(unit_count):
+			var unit_rect = Rect2(
+				rect.position.x + i * unit_width,
+				rect.position.y,
+				unit_width,
+				rect.size.y
+			)
+			selected_units[i].form_to_rect(unit_rect)
+	else:
+		# Tall rectangle: split vertically
+		var unit_height = rect.size.y / unit_count
+		for i in range(unit_count):
+			var unit_rect = Rect2(
+				rect.position.x,
+				rect.position.y + i * unit_height,
+				rect.size.x,
+				unit_height
+			)
+			selected_units[i].form_to_rect(unit_rect)
+

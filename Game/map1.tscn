@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
 [ext_resource type="PackedScene" uid="uid://d1gd82e1vlxgv" path="res://goblin.tscn" id="25_tpdc5"]
-[ext_resource type="PackedScene" uid="uid://cngxwalac0lb6" path="res://knightRed.tscn" id="26_7jyq4"]
+[ext_resource type="PackedScene" uid="uid://ckfdt4pk6ssyc" path="res://knightRed.tscn" id="26_7jyq4"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="26_88kjh"]
 [ext_resource type="Script" path="res://KnightUnit.gd" id="27_dr8ji"]
 
