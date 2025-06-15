@@ -265,8 +265,7 @@ script = ExtResource("1_k5syv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_oqeon")
-animation = &"AttackUp"
-frame_progress = 0.262653
+animation = &"Idle"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 40.0
