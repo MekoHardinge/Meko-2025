@@ -43,3 +43,5 @@ func form_to_rect(rect: Rect2):
 			row * cell_h + cell_h * 0.5
 		)
 		knights[i].set_target_position(target)
+
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=89 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -39,6 +39,10 @@
 [ext_resource type="Texture2D" uid="uid://bobuubh10sfbq" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="31_agsf8"]
 [ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="32_pir5p"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="33_5s20v"]
+[ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="33_n7s4j"]
+[ext_resource type="Texture2D" uid="uid://cnfggw8y5ac61" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_9Slides.png" id="34_6wher"]
+[ext_resource type="Script" path="res://UnitSelectButton.gd" id="35_l84q2"]
+[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="37_rsl56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
 texture = ExtResource("1_n1504")
@@ -615,6 +619,17 @@ sources/6 = SubResource("TileSetAtlasSource_ie4yk")
 sources/7 = SubResource("TileSetAtlasSource_04ari")
 sources/8 = SubResource("TileSetAtlasSource_reueb")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24vtk"]
+texture = ExtResource("33_n7s4j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2r2l"]
+texture = ExtResource("33_n7s4j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvh7d"]
+texture = ExtResource("34_6wher")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wx3ho"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0xaa"]
 atlas = ExtResource("33_5s20v")
 region = Rect2(0, 0, 192, 192)
@@ -624,6 +639,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h0xaa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77pup"]
+atlas = ExtResource("37_rsl56")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1m8lt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77pup")
 }],
 "loop": true,
 "name": &"default",
@@ -689,11 +719,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="UI" type="TileMap" parent="Camera2D/Control"]
+position = Vector2(0, 400)
 scale = Vector2(10, 10)
 tile_set = SubResource("TileSet_00544")
 rendering_quadrant_size = 128
 format = 2
-layer_0/tile_data = PackedInt32Array(262149, 65538, 1, 196613, 65538, 0, 196612, 65538, 0, 196611, 65538, 0, 196610, 65538, 0, 196609, 65538, 0, 262145, 65538, 1, 262146, 65537, 1, 262147, 65537, 1, 262148, 65537, 1, 262150, 131074, 1, 196614, 131074, 0, 262144, 1, 1, 196608, 1, 0)
+layer_0/tile_data = PackedInt32Array(262149, 65538, 1, 262145, 65538, 1, 262146, 65537, 1, 262147, 65537, 1, 262148, 65537, 1, 262150, 131074, 1, 262144, 1, 1, 196609, 65538, 1, 196610, 65538, 1, 196611, 65538, 1, 196612, 65538, 1, 196613, 65538, 1, 196614, 131074, 1, 131078, 131074, 0, 131077, 65538, 0, 131076, 65538, 0, 131075, 65538, 0, 131074, 65538, 0, 131073, 65538, 0, 196608, 1, 1, 131072, 1, 0)
 
 [node name="Button" type="Button" parent="Camera2D/Control/UI"]
 offset_left = 98.4
@@ -707,31 +738,69 @@ offset_top = 270.8
 offset_right = 186.4
 offset_bottom = 278.8
 
-[node name="Blue" type="Button" parent="Camera2D/Control/UI"]
-offset_left = 309.4
-offset_top = 224.4
-offset_right = 325.4
-offset_bottom = 239.4
+[node name="Blue" type="Button" parent="Camera2D/Control/UI" groups=["Blue", "buttons"]]
+offset_left = 312.7
+offset_top = 179.8
+offset_right = 331.7
+offset_bottom = 197.8
 scale = Vector2(3.936, 3.984)
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_24vtk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q2r2l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wvh7d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wx3ho")
 toggle_mode = true
+script = ExtResource("35_l84q2")
 
-[node name="BlueSprite" type="AnimatedSprite2D" parent="Camera2D/Control/UI/Blue"]
-position = Vector2(8.18088, 6.72691)
+[node name="Sprite" type="AnimatedSprite2D" parent="Camera2D/Control/UI/Blue"]
+position = Vector2(9.29878, 6.3253)
 scale = Vector2(0.203252, 0.200803)
 sprite_frames = SubResource("SpriteFrames_favvx")
 
-[node name="Red" type="Button" parent="Camera2D/Control/UI"]
-offset_left = 230.3
-offset_top = 251.8
-offset_right = 246.3
-offset_bottom = 266.8
+[node name="Red" type="Button" parent="Camera2D/Control/UI" groups=["Red", "buttons"]]
+offset_left = 234.8
+offset_top = 180.4
+offset_right = 253.8
+offset_bottom = 198.4
 scale = Vector2(3.936, 3.984)
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_24vtk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q2r2l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wvh7d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wx3ho")
+toggle_mode = true
+script = ExtResource("35_l84q2")
 
-[node name="RedSprite" type="AnimatedSprite2D" parent="Camera2D/Control"]
-position = Vector2(2304, 1296)
-scale = Vector2(1, 1)
+[node name="Sprite" type="AnimatedSprite2D" parent="Camera2D/Control/UI/Red"]
+position = Vector2(9.29878, 6.3253)
+scale = Vector2(0.203252, 0.200803)
+sprite_frames = SubResource("SpriteFrames_1m8lt")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 scale = Vector2(1.10883, 0.997134)
@@ -746,7 +815,7 @@ position = Vector2(5315, 286)
 [node name="Goblin" parent="." instance=ExtResource("25_tpdc5")]
 position = Vector2(5319, 440)
 
-[node name="KnightUnitRed" type="Node2D" parent="."]
+[node name="KnightUnitRed" type="Node2D" parent="." groups=["Red"]]
 position = Vector2(888, 888)
 script = ExtResource("27_dr8ji")
 
@@ -786,7 +855,7 @@ position = Vector2(120, -144)
 [node name="KnightRed" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
 position = Vector2(231, -6)
 
-[node name="KnightUnitBlue" type="Node2D" parent="."]
+[node name="KnightUnitBlue" type="Node2D" parent="." groups=["Blue"]]
 position = Vector2(444, 444)
 script = ExtResource("27_dr8ji")
 
