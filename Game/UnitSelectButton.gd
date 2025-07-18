@@ -19,7 +19,7 @@ func _ready():
 func _on_toggled(button_pressed: bool) -> void:
 	print("Button toggled:", button_pressed, "Group:", group_name)
 	if button_pressed:
-		sprite.position.y = original_position.y - 5
+		sprite.position.y = original_position.y - 1
 	else:
 		sprite.position = original_position
 

@@ -21,10 +21,8 @@ func _on_button_selection_changed(selected_groups: Array, selected: bool) -> voi
 		else:
 			active_selected_groups.erase(group_name)
 
-	# Clear all selections first
 	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
 		ctrl.selected = false
-		# If still in any active group, mark selected
 		for group_name in active_selected_groups.keys():
 			if ctrl.is_in_group(group_name):
 				ctrl.selected = true
@@ -43,7 +41,6 @@ func _input(event):
 					_select_units()
 				is_selecting = false
 				queue_redraw()
-
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			if event.pressed:
 				is_forming = true
@@ -55,7 +52,6 @@ func _input(event):
 					_form_units(Rect2(form_start, form_end - form_start).abs())
 				is_forming = false
 				queue_redraw()
-
 	elif event is InputEventMouseMotion:
 		if is_selecting:
 			sel_end = get_global_mouse_position()
@@ -84,28 +80,26 @@ func _draw():
 		if unit_count == 0:
 			return
 
-		var aspect = r2.size.x / r2.size.y if r2.size.y != 0 else 1.0
+		var grid = get_grid_by_rect(unit_count, r2.size)
+		var cols = grid.x
+		var rows = grid.y
+		var cell_w = r2.size.x / cols
+		var cell_h = r2.size.y / rows
 
-		if aspect >= 1.0:
-			var unit_width = r2.size.x / unit_count
-			for i in range(unit_count):
-				var unit_rect = Rect2(
-					r2.position.x + i * unit_width,
-					r2.position.y,
-					unit_width,
-					r2.size.y
+		var i = 0
+		for row in range(rows):
+			var units_this_row = min(cols, unit_count - i)
+			var row_width = units_this_row * cell_w
+			var start_x = r2.position.x + (r2.size.x - row_width) * 0.5
+			for col in range(units_this_row):
+				var rect = Rect2(
+					start_x + col * cell_w,
+					r2.position.y + row * cell_h,
+					cell_w,
+					cell_h
 				)
-				_draw_unit_preview(selected_units[i], unit_rect)
-		else:
-			var unit_height = r2.size.y / unit_count
-			for i in range(unit_count):
-				var unit_rect = Rect2(
-					r2.position.x,
-					r2.position.y + i * unit_height,
-					r2.size.x,
-					unit_height
-				)
-				_draw_unit_preview(selected_units[i], unit_rect)
+				_draw_unit_preview(selected_units[i], rect)
+				i += 1
 
 	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
 		if ctrl.selected and ctrl.has_method("last_formation_rect") and ctrl.last_formation_rect.size != Vector2.ZERO:
@@ -116,19 +110,20 @@ func _draw_unit_preview(ctrl, rect):
 	if cnt == 0:
 		return
 
-	var aspect_ratio = rect.size.x / rect.size.y if rect.size.y != 0 else 1.0
-	var rows = int(ceil(sqrt(cnt / aspect_ratio)))
-	rows = max(rows, 1)
-	var cols = int(ceil(cnt / float(rows)))
-
+	var grid = get_grid_by_rect(cnt, rect.size)
+	var cols = grid.x
+	var rows = grid.y
 	var cell_w = rect.size.x / cols
 	var cell_h = rect.size.y / rows
 
 	var unit_index = 0
 	for row in range(rows):
 		var units_this_row = min(cols, cnt - unit_index)
+		# Center units horizontally in this row
+		var row_width = units_this_row * cell_w
+		var start_x = rect.position.x + (rect.size.x - row_width) * 0.5
 		for col in range(units_this_row):
-			var x = rect.position.x + col * cell_w + cell_w * 0.5
+			var x = start_x + col * cell_w + cell_w * 0.5
 			var y = rect.position.y + row * cell_h + cell_h * 0.5
 			draw_circle(Vector2(x, y), 5, Color(1, 1, 0.3, 0.8))
 			unit_index += 1
@@ -155,25 +150,47 @@ func _form_units(rect: Rect2):
 	if unit_count == 0:
 		return
 
-	var aspect = rect.size.x / rect.size.y if rect.size.y != 0 else 1.0
+	var grid = get_grid_by_rect(unit_count, rect.size)
+	var cols = grid.x
+	var rows = grid.y
+	var cell_w = rect.size.x / cols
+	var cell_h = rect.size.y / rows
 
-	if aspect >= 1.0:
-		var unit_width = rect.size.x / unit_count
-		for i in range(unit_count):
+	var i = 0
+	for row in range(rows):
+		var units_this_row = min(cols, unit_count - i)
+		var row_width = units_this_row * cell_w
+		var start_x = rect.position.x + (rect.size.x - row_width) * 0.5
+		for col in range(units_this_row):
 			var unit_rect = Rect2(
-				rect.position.x + i * unit_width,
-				rect.position.y,
-				unit_width,
-				rect.size.y
+				start_x + col * cell_w,
+				rect.position.y + row * cell_h,
+				cell_w,
+				cell_h
 			)
 			selected_units[i].form_to_rect(unit_rect)
-	else:
-		var unit_height = rect.size.y / unit_count
-		for i in range(unit_count):
-			var unit_rect = Rect2(
-				rect.position.x,
-				rect.position.y + i * unit_height,
-				rect.size.x,
-				unit_height
-			)
-			selected_units[i].form_to_rect(unit_rect)
+			i += 1
+
+func get_grid_by_rect(unit_count: int, size: Vector2) -> Vector2i:
+	if size == Vector2.ZERO or unit_count == 0:
+		return Vector2i(1, unit_count)
+
+	var best_cols = 1
+	var best_rows = unit_count
+	var best_error = INF
+
+	for cols in range(1, unit_count + 1):
+		var rows = int(ceil(unit_count / float(cols)))
+		var grid_ratio = cols / float(rows)
+		var aspect_ratio = size.x / size.y
+		var error = abs(grid_ratio - aspect_ratio)
+
+		var balance_penalty = abs((cols * rows) - unit_count)
+		var total_error = error + balance_penalty * 1  # penalize unused cells lightly
+
+		if total_error < best_error:
+			best_error = total_error
+			best_cols = cols
+			best_rows = rows
+
+	return Vector2i(best_cols, best_rows)
