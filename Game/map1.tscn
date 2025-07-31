@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=91 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="18_yo72t"]
 [ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="19_sqxea"]
 [ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="20_can02"]
-[ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
 [ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="24_mnuin"]
 [ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="25_t4jae"]
@@ -40,9 +39,12 @@
 [ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="32_pir5p"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="33_5s20v"]
 [ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="33_n7s4j"]
+[ext_resource type="Script" path="res://Purple.gd" id="33_r2wik"]
 [ext_resource type="Texture2D" uid="uid://cnfggw8y5ac61" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_9Slides.png" id="34_6wher"]
 [ext_resource type="Script" path="res://UnitSelectButton.gd" id="35_l84q2"]
 [ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="37_rsl56"]
+[ext_resource type="PackedScene" uid="uid://wvyx6nq7ysfo" path="res://knightUnitBlue.tscn" id="41_i1wdn"]
+[ext_resource type="Script" path="res://NetworkManager.gd" id="44_1ijq5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
 texture = ExtResource("1_n1504")
@@ -733,10 +735,11 @@ offset_right = 106.4
 offset_bottom = 278.8
 
 [node name="Purple" type="Button" parent="Camera2D/Control/UI"]
-offset_left = 178.4
-offset_top = 270.8
-offset_right = 186.4
-offset_bottom = 278.8
+offset_left = 192.5
+offset_top = 213.6
+offset_right = 200.5
+offset_bottom = 221.6
+script = ExtResource("33_r2wik")
 
 [node name="Blue" type="Button" parent="Camera2D/Control/UI" groups=["Blue", "buttons"]]
 offset_left = 312.7
@@ -806,69 +809,6 @@ sprite_frames = SubResource("SpriteFrames_1m8lt")
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
-[node name="Goblin13" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4895, 697)
-
-[node name="Goblin14" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4781, 635)
-
-[node name="Goblin15" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4785, 789)
-
-[node name="Goblin16" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4927, 366)
-
-[node name="Goblin17" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4629, 725)
-
-[node name="Goblin18" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4515, 663)
-
-[node name="Goblin19" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4519, 817)
-
-[node name="Goblin20" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4661, 394)
-
-[node name="Goblin21" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4547, 332)
-
-[node name="Goblin22" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4551, 486)
-
-[node name="Goblin23" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4813, 304)
-
-[node name="Goblin24" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(4817, 458)
-
-[node name="Goblin4" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5397, 679)
-
-[node name="Goblin5" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5283, 617)
-
-[node name="Goblin6" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5287, 771)
-
-[node name="Goblin2" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5429, 348)
-
-[node name="Goblin7" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5131, 707)
-
-[node name="Goblin8" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5017, 645)
-
-[node name="Goblin9" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5021, 799)
-
-[node name="Goblin10" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5163, 376)
-
-[node name="Goblin11" parent="." instance=ExtResource("25_tpdc5")]
-position = Vector2(5049, 314)
-
 [node name="Goblin12" parent="." instance=ExtResource("25_tpdc5")]
 position = Vector2(5053, 468)
 
@@ -918,45 +858,7 @@ position = Vector2(120, -144)
 [node name="KnightRed" parent="KnightUnitRed" instance=ExtResource("26_7jyq4")]
 position = Vector2(231, -6)
 
-[node name="KnightUnitBlue" type="Node2D" parent="." groups=["Blue"]]
-position = Vector2(444, 444)
-script = ExtResource("27_dr8ji")
-
-[node name="KnightBlue11" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(237, -176)
-
-[node name="KnightBlue12" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(164, 32)
-
-[node name="KnightBlue" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(-11, -223)
-
-[node name="KnightBlue2" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(74, -175)
-
-[node name="KnightBlue3" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(15, -95)
-
-[node name="KnightBlue4" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(0, 59)
-
-[node name="KnightBlue5" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(-85, 11)
-
-[node name="KnightBlue6" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(-59, 139)
-
-[node name="KnightBlue7" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(22, 355)
-
-[node name="KnightBlue8" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(-63, 307)
-
-[node name="KnightBlue9" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(-37, 435)
-
-[node name="KnightBlue10" parent="KnightUnitBlue" instance=ExtResource("21_44ykt")]
-position = Vector2(52, 203)
+[node name="KnightUnitBlue" parent="." instance=ExtResource("41_i1wdn")]
 
 [node name="RTS-Node" type="Node2D" parent="."]
 script = ExtResource("22_fop6k")
@@ -976,5 +878,9 @@ script = ExtResource("26_88kjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_c4tfc")
+
+[node name="Multiplayer" type="Node" parent="."]
+script = ExtResource("44_1ijq5")
+is_server = true
 
 [connection signal="timeout" from="RTS-Node/LongLeftClickTimer" to="RTS-Node" method="_on_long_left_click_timer_timeout"]

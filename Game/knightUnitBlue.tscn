@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://wvyx6nq7ysfo"]
+
+[ext_resource type="Script" path="res://KnightUnit.gd" id="1_00vk6"]
+[ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="2_lfrhc"]
+
+[node name="KnightUnitBlue" type="Node2D" groups=["Blue"]]
+position = Vector2(444, 444)
+script = ExtResource("1_00vk6")
+
+[node name="KnightBlue11" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(237, -176)
+
+[node name="KnightBlue12" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(164, 32)
+
+[node name="KnightBlue" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(-11, -223)
+
+[node name="KnightBlue2" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(74, -175)
+
+[node name="KnightBlue3" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(15, -95)
+
+[node name="KnightBlue4" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(0, 59)
+
+[node name="KnightBlue5" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(-85, 11)
+
+[node name="KnightBlue6" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(-59, 139)
+
+[node name="KnightBlue7" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(22, 355)
+
+[node name="KnightBlue8" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(-63, 307)
+
+[node name="KnightBlue9" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(-37, 435)
+
+[node name="KnightBlue10" parent="." instance=ExtResource("2_lfrhc")]
+position = Vector2(52, 203)
