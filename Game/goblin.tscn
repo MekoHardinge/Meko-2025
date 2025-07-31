@@ -253,7 +253,7 @@ radius = 24.0
 height = 68.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ev2m2"]
-radius = 250.008
+radius = 1384.83
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vbje3"]
 radius = 66.0681
@@ -271,7 +271,6 @@ animation = &"AttackDown"
 path_desired_distance = 40.0
 target_desired_distance = 40.0
 avoidance_enabled = true
-debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)

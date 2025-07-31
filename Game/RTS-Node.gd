@@ -139,6 +139,15 @@ func _select_units():
 			if expanded_r.has_point(k.global_position):
 				ctrl.selected = true
 				break
+	
+	# Update active_selected_groups to match newly selected units
+	update_active_selected_groups_from_units()
+	
+	# Sync button toggles with active_selected_groups
+	for button in get_tree().get_nodes_in_group("buttons"):
+		var is_active = button.group_name in active_selected_groups
+		button.set_pressed_no_signal(is_active)
+		button.sprite.position.y = button.original_position.y - 1 if is_active else button.original_position.y
 
 func _form_units(rect: Rect2):
 	var selected_units = []
@@ -194,3 +203,11 @@ func get_grid_by_rect(unit_count: int, size: Vector2) -> Vector2i:
 			best_rows = rows
 
 	return Vector2i(best_cols, best_rows)
+
+# New helper function added:
+func update_active_selected_groups_from_units():
+	active_selected_groups.clear()
+	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
+		if ctrl.selected:
+			for group_name in ctrl.get_groups():
+				active_selected_groups[group_name] = true

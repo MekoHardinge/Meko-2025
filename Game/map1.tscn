@@ -806,8 +806,71 @@ sprite_frames = SubResource("SpriteFrames_1m8lt")
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
+[node name="Goblin13" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4895, 697)
+
+[node name="Goblin14" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4781, 635)
+
+[node name="Goblin15" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4785, 789)
+
+[node name="Goblin16" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4927, 366)
+
+[node name="Goblin17" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4629, 725)
+
+[node name="Goblin18" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4515, 663)
+
+[node name="Goblin19" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4519, 817)
+
+[node name="Goblin20" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4661, 394)
+
+[node name="Goblin21" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4547, 332)
+
+[node name="Goblin22" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4551, 486)
+
+[node name="Goblin23" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4813, 304)
+
+[node name="Goblin24" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(4817, 458)
+
+[node name="Goblin4" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5397, 679)
+
+[node name="Goblin5" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5283, 617)
+
+[node name="Goblin6" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5287, 771)
+
 [node name="Goblin2" parent="." instance=ExtResource("25_tpdc5")]
 position = Vector2(5429, 348)
+
+[node name="Goblin7" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5131, 707)
+
+[node name="Goblin8" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5017, 645)
+
+[node name="Goblin9" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5021, 799)
+
+[node name="Goblin10" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5163, 376)
+
+[node name="Goblin11" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5049, 314)
+
+[node name="Goblin12" parent="." instance=ExtResource("25_tpdc5")]
+position = Vector2(5053, 468)
 
 [node name="Goblin3" parent="." instance=ExtResource("25_tpdc5")]
 position = Vector2(5315, 286)
