@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://d1gd82e1vlxgv"]
 
 [ext_resource type="Script" path="res://goblin.gd" id="1_k5syv"]
-[ext_resource type="Texture2D" uid="uid://b7eth60sql11o" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_em1oa"]
+[ext_resource type="Texture2D" uid="uid://b7eth60sql11o" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_em1oa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o282l"]
 atlas = ExtResource("2_em1oa")

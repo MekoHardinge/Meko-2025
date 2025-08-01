@@ -1,8 +1,8 @@
 [gd_scene load_steps=67 format=3 uid="uid://ckfdt4pk6ssyc"]
 
 [ext_resource type="Script" path="res://BlueKnight.gd" id="1_wnjhh"]
-[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_cs6pw"]
-[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="2_krsnh"]
+[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_cs6pw"]
+[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="2_krsnh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekwx1"]
 atlas = ExtResource("2_krsnh")
