@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=90 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
 [ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="32_pir5p"]
 [ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="33_5s20v"]
 [ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="33_n7s4j"]
-[ext_resource type="Script" path="res://Purple.gd" id="33_r2wik"]
 [ext_resource type="Texture2D" uid="uid://cnfggw8y5ac61" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_9Slides.png" id="34_6wher"]
 [ext_resource type="Script" path="res://UnitSelectButton.gd" id="35_l84q2"]
 [ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="37_rsl56"]
@@ -739,7 +738,6 @@ offset_left = 192.5
 offset_top = 213.6
 offset_right = 200.5
 offset_bottom = 221.6
-script = ExtResource("33_r2wik")
 
 [node name="Blue" type="Button" parent="Camera2D/Control/UI" groups=["Blue", "buttons"]]
 offset_left = 312.7
@@ -881,6 +879,5 @@ shape = SubResource("RectangleShape2D_c4tfc")
 
 [node name="Multiplayer" type="Node" parent="."]
 script = ExtResource("44_1ijq5")
-is_server = true
 
 [connection signal="timeout" from="RTS-Node/LongLeftClickTimer" to="RTS-Node" method="_on_long_left_click_timer_timeout"]
