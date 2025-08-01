@@ -1,23 +1,14 @@
 extends Button
 
 func _ready():
-	pressed.connect(_on_pressed)
+	print("🔘 ConnectButton is ready.")
+	pressed.connect(_on_button_pressed)
 
-func _on_pressed():
-	print("Attempting to connect to server...")
-	var peer = ENetMultiplayerPeer.new()
-	peer.create_client("10.100.28.43", 4242)
-	multiplayer.multiplayer_peer = peer
-
-	multiplayer.connect("connection_succeeded", Callable(self, "_on_connection_succeeded"))
-	multiplayer.connect("connection_failed", Callable(self, "_on_connection_failed"))
-	multiplayer.connect("server_disconnected", Callable(self, "_on_server_disconnected"))
-
-func _on_connection_succeeded():
-	print("✅ Connected to server!")
-
-func _on_connection_failed():
-	print("❌ Failed to connect to server.")
-
-func _on_server_disconnected():
-	print("🔌 Disconnected from server.")
+func _on_button_pressed():
+	print("📡 Connect button pressed.")
+	var game_manager = get_tree().get_root().get_node($"../../../../Multiplayer")
+	if game_manager:
+		print("✅ Found MultiplayerGameManager node.")
+		game_manager.connect_to_server("10.100.43.210")  # Replace with your actual server IP
+	else:
+		print("❌ MultiplayerGameManager not found!")
