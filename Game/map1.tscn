@@ -1,48 +1,238 @@
-[gd_scene load_steps=89 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=126 format=3 uid="uid://cbnxgk4yjoxsk"]
 
-[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
-[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
-[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="2_flypv"]
-[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="2_prpsn"]
-[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="3_tm6k0"]
-[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="4_a1w8j"]
-[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="5_r7ik0"]
-[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="6_8hcyc"]
-[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="7_uh6fy"]
-[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="8_jkva4"]
-[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="9_fuk7o"]
-[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="10_an506"]
-[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="11_qdwkn"]
-[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="13_vlycj"]
-[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="14_d4ttc"]
-[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="15_3gp0b"]
-[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="15_os1lg"]
-[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="16_cibru"]
-[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="16_men3r"]
-[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="17_jbnq8"]
-[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="18_yo72t"]
-[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="19_sqxea"]
-[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="20_can02"]
+[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_cdurm"]
+[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_n1504"]
+[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="2_flypv"]
+[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="2_prpsn"]
+[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="3_tm6k0"]
+[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="4_a1w8j"]
+[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="5_r7ik0"]
+[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="6_8hcyc"]
+[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="7_uh6fy"]
+[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="8_jkva4"]
+[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="9_fuk7o"]
+[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="10_an506"]
+[ext_resource type="Texture2D" uid="uid://cjtsj7vea5b1b" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="10_tcr2e"]
+[ext_resource type="Texture2D" uid="uid://b6y4qiqiq6s4j" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Down.png" id="11_3cl5v"]
+[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="11_qdwkn"]
+[ext_resource type="Texture2D" uid="uid://cxf8c8dgyu5re" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Down_Pressed.png" id="12_fwld6"]
+[ext_resource type="Texture2D" uid="uid://c255fjrpp3d7o" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Left.png" id="13_ef3ek"]
+[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="13_vlycj"]
+[ext_resource type="Texture2D" uid="uid://cueaaoymy21g" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Left_Pressed.png" id="14_7re7d"]
+[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="14_d4ttc"]
+[ext_resource type="Texture2D" uid="uid://b01b7g5fos0h" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Right.png" id="15_3aggr"]
+[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="15_3gp0b"]
+[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="15_os1lg"]
+[ext_resource type="Texture2D" uid="uid://ww77auj5o85p" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Right_Pressed.png" id="16_0kbqp"]
+[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="16_cibru"]
+[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="16_men3r"]
+[ext_resource type="Texture2D" uid="uid://30u134fitvge" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Up.png" id="17_233r2"]
+[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="17_jbnq8"]
+[ext_resource type="Texture2D" uid="uid://bi6kemo7g26rg" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Up_Pressed.png" id="18_io1tp"]
+[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="18_yo72t"]
+[ext_resource type="FontFile" uid="uid://1gqidym2xmnv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/ITC Benguiat Condensed Bold.otf" id="19_ixgc3"]
+[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="19_sqxea"]
+[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="20_can02"]
+[ext_resource type="Texture2D" uid="uid://dnvqkvo2hbtam" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_3Slides.png" id="20_insbt"]
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="21_44ykt"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="22_fop6k"]
-[ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="24_mnuin"]
-[ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="25_t4jae"]
+[ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="24_mnuin"]
+[ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="25_t4jae"]
 [ext_resource type="PackedScene" uid="uid://d1gd82e1vlxgv" path="res://goblin.tscn" id="25_tpdc5"]
 [ext_resource type="PackedScene" uid="uid://ckfdt4pk6ssyc" path="res://knightRed.tscn" id="26_7jyq4"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="26_88kjh"]
-[ext_resource type="Texture2D" uid="uid://dmf424l66g7yx" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Right.png" id="26_v0rjr"]
+[ext_resource type="Texture2D" uid="uid://dmf424l66g7yx" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Right.png" id="26_v0rjr"]
 [ext_resource type="Script" path="res://KnightUnit.gd" id="27_dr8ji"]
-[ext_resource type="Texture2D" uid="uid://cow8ugqq85e5d" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Up.png" id="27_tfk6n"]
-[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="28_so12u"]
-[ext_resource type="Texture2D" uid="uid://di15niehl3eug" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Vertical.png" id="29_p1yoa"]
-[ext_resource type="Texture2D" uid="uid://bbsbq00m1xusx" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="30_d6kbs"]
-[ext_resource type="Texture2D" uid="uid://bobuubh10sfbq" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="31_agsf8"]
-[ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="32_pir5p"]
-[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="33_5s20v"]
-[ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="33_n7s4j"]
-[ext_resource type="Texture2D" uid="uid://cnfggw8y5ac61" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_9Slides.png" id="34_6wher"]
+[ext_resource type="Texture2D" uid="uid://cow8ugqq85e5d" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Up.png" id="27_tfk6n"]
+[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="28_so12u"]
+[ext_resource type="Texture2D" uid="uid://di15niehl3eug" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Vertical.png" id="29_p1yoa"]
+[ext_resource type="Texture2D" uid="uid://bbsbq00m1xusx" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="30_d6kbs"]
+[ext_resource type="Texture2D" uid="uid://bobuubh10sfbq" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="31_agsf8"]
+[ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="32_pir5p"]
+[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="33_5s20v"]
+[ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="33_n7s4j"]
+[ext_resource type="Texture2D" uid="uid://cnfggw8y5ac61" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_9Slides.png" id="34_6wher"]
 [ext_resource type="Script" path="res://UnitSelectButton.gd" id="35_l84q2"]
-[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="37_rsl56"]
+[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="37_rsl56"]
+[ext_resource type="Texture2D" uid="uid://dyk3crobwwt7t" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Icons/Regular_02.png" id="38_65x4l"]
+[ext_resource type="Texture2D" uid="uid://b474pda8pavyo" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Icons/Pressed_02.png" id="39_d74k8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6udl7"]
+texture = ExtResource("24_mnuin")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qd3ib"]
+texture = ExtResource("25_t4jae")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0ggb"]
+texture = ExtResource("26_v0rjr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npjej"]
+texture = ExtResource("27_tfk6n")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1suwo"]
+texture = ExtResource("28_so12u")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbbt0"]
+texture = ExtResource("29_p1yoa")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0sgg"]
+texture = ExtResource("30_d6kbs")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3ykq"]
+texture = ExtResource("31_agsf8")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1d4n1"]
+texture = ExtResource("32_pir5p")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7fur"]
+texture = ExtResource("10_tcr2e")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fb2pm"]
+texture = ExtResource("11_3cl5v")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sgkr"]
+texture = ExtResource("12_fwld6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2o80e"]
+texture = ExtResource("13_ef3ek")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2cre"]
+texture = ExtResource("14_7re7d")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfjnd"]
+texture = ExtResource("15_3aggr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yi65q"]
+texture = ExtResource("16_0kbqp")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvix1"]
+texture = ExtResource("17_233r2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpaar"]
+texture = ExtResource("18_io1tp")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rakd3"]
+tile_size = Vector2i(64, 64)
+sources/18 = SubResource("TileSetAtlasSource_6udl7")
+sources/19 = SubResource("TileSetAtlasSource_qd3ib")
+sources/20 = SubResource("TileSetAtlasSource_v0ggb")
+sources/21 = SubResource("TileSetAtlasSource_npjej")
+sources/22 = SubResource("TileSetAtlasSource_1suwo")
+sources/23 = SubResource("TileSetAtlasSource_lbbt0")
+sources/24 = SubResource("TileSetAtlasSource_a0sgg")
+sources/25 = SubResource("TileSetAtlasSource_t3ykq")
+sources/26 = SubResource("TileSetAtlasSource_1d4n1")
+sources/27 = SubResource("TileSetAtlasSource_a7fur")
+sources/28 = SubResource("TileSetAtlasSource_fb2pm")
+sources/29 = SubResource("TileSetAtlasSource_0sgkr")
+sources/30 = SubResource("TileSetAtlasSource_2o80e")
+sources/31 = SubResource("TileSetAtlasSource_x2cre")
+sources/32 = SubResource("TileSetAtlasSource_cfjnd")
+sources/33 = SubResource("TileSetAtlasSource_yi65q")
+sources/34 = SubResource("TileSetAtlasSource_dvix1")
+sources/35 = SubResource("TileSetAtlasSource_hpaar")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_itly2"]
+texture = ExtResource("20_insbt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ncg5"]
+texture = ExtResource("20_insbt")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
 texture = ExtResource("1_n1504")
@@ -660,6 +850,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20721"]
+texture = ExtResource("38_65x4l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cuxt2"]
+texture = ExtResource("38_65x4l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5pqb"]
+texture = ExtResource("39_d74k8")
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uwmk6"]
 vertices = PackedVector2Array(5055, 2413, 150, 2378, 151, 161, 5055, 153)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
@@ -674,7 +873,97 @@ size = Vector2(1152, 18)
 [node name="Map1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [0.0]
 
+[node name="Settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuTilemap" type="TileMap" parent="Settings"]
+z_index = 12
+position = Vector2(0, 209)
+scale = Vector2(10, 10)
+tile_set = SubResource("TileSet_rakd3")
+rendering_quadrant_size = 64
+format = 2
+layer_0/y_sort_origin = 99999
+layer_0/tile_data = PackedInt32Array(131076, 65555, 1, 196612, 65555, 1, 65539, 65555, 1, 131075, 65555, 1, 196611, 65555, 1, 65540, 65555, 1, 65541, 65555, 1, 131077, 65555, 1, 196613, 65555, 1, 65542, 65555, 1, 131078, 65555, 1, 196614, 65555, 1, 65538, 65555, 1, 131074, 65555, 1, 196610, 65555, 1, 262145, 65558, 2, 262146, 65555, 2, 262147, 65555, 2, 262148, 65555, 2, 262149, 65555, 2, 262150, 65555, 2, 262151, 65558, 2, 65543, 65558, 1, 131079, 65558, 1, 196615, 65558, 1, 7, 65558, 1, 1, 65558, 1, 2, 65558, 1, 3, 65558, 1, 4, 65558, 1, 5, 65558, 1, 6, 65558, 1, 65537, 65558, 1, 131073, 65558, 1, 196609, 65558, 1, 65544, 131094, 1, 131080, 131094, 1, 196616, 131094, 1, 8, 131094, 1, 0, 22, 1, 65536, 22, 1, 131072, 22, 1, 196608, 22, 1, 262144, 22, 2, 262152, 131094, 2, -65535, 65558, 0, -65534, 65558, 0, -65533, 65558, 0, -65532, 65558, 0, -65531, 65558, 0, -65530, 65558, 0, -65529, 65558, 0, -65528, 131094, 0, -65536, 22, 0)
+layer_1/tile_data = PackedInt32Array(2, 65563, 0, 3, 65563, 0, 1, 27, 0, 4, 65563, 0, 5, 65563, 0, 6, 65563, 0, 7, 131099, 0)
+
+[node name="Title" type="Label" parent="Settings/MenuTilemap"]
+offset_left = 112.0
+offset_top = 5.0
+offset_right = 470.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("19_ixgc3")
+theme_override_font_sizes/font_size = 30
+text = "Tideborn"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="Settings/MenuTilemap"]
+offset_left = 294.0
+offset_top = 76.0
+offset_right = 513.0
+offset_bottom = 145.0
+scale = Vector2(1, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_itly2")
+
+[node name="Title" type="Label" parent="Settings/MenuTilemap/Button2"]
+offset_left = -67.6
+offset_top = 11.0
+offset_right = 290.4
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("19_ixgc3")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="Settings/MenuTilemap"]
+offset_left = 64.0
+offset_top = 76.0
+offset_right = 282.0
+offset_bottom = 145.0
+scale = Vector2(1, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ncg5")
+
+[node name="Title2" type="Label" parent="Settings/MenuTilemap/Button3"]
+offset_left = -68.0
+offset_top = 10.3333
+offset_right = 290.0
+offset_bottom = 47.3333
+theme_override_fonts/font = ExtResource("19_ixgc3")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="Settings/MenuTilemap"]
+offset_left = 294.0
+offset_top = 160.8
+offset_right = 513.0
+offset_bottom = 229.8
+scale = Vector2(1, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_itly2")
+
+[node name="Title3" type="Label" parent="Settings/MenuTilemap/Button4"]
+offset_left = -66.0
+offset_top = 10.3333
+offset_right = 292.0
+offset_bottom = 47.3333
+theme_override_fonts/font = ExtResource("19_ixgc3")
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="Settings/MenuTilemap"]
+offset_left = 64.0
+offset_top = 160.8
+offset_right = 282.0
+offset_bottom = 229.8
+scale = Vector2(1, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ncg5")
+
 [node name="Terrain" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_spq7y")
 rendering_quadrant_size = 64
 format = 2
@@ -763,6 +1052,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_q2r2l")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wvh7d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wx3ho")
 toggle_mode = true
+button_mask = 0
 script = ExtResource("35_l84q2")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Camera2D/Control/UI/Blue"]
@@ -795,6 +1085,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_q2r2l")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wvh7d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wx3ho")
 toggle_mode = true
+button_mask = 0
 script = ExtResource("35_l84q2")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Camera2D/Control/UI/Red"]
@@ -802,83 +1093,136 @@ position = Vector2(9.29878, 6.3253)
 scale = Vector2(0.203252, 0.200803)
 sprite_frames = SubResource("SpriteFrames_1m8lt")
 
+[node name="Menu" type="Button" parent="Camera2D/Control/UI"]
+offset_left = 430.5
+offset_top = 177.2
+offset_right = 454.5
+offset_bottom = 200.2
+scale = Vector2(3.936, 3.984)
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_20721")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cuxt2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5pqb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wx3ho")
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
-[node name="Goblin13" parent="." instance=ExtResource("25_tpdc5")]
+[node name="GoblinArmy" type="Node" parent="."]
+
+[node name="Goblin13" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4895, 697)
 
-[node name="Goblin14" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin14" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4781, 635)
 
-[node name="Goblin15" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin15" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4785, 789)
 
-[node name="Goblin16" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin16" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4927, 366)
 
-[node name="Goblin17" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin17" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4629, 725)
 
-[node name="Goblin18" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin18" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4515, 663)
 
-[node name="Goblin19" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin19" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4519, 817)
 
-[node name="Goblin20" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin20" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4661, 394)
 
-[node name="Goblin21" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin21" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4547, 332)
 
-[node name="Goblin22" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin22" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4551, 486)
 
-[node name="Goblin23" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin23" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4813, 304)
 
-[node name="Goblin24" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin24" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(4817, 458)
 
-[node name="Goblin4" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin4" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5397, 679)
 
-[node name="Goblin5" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin5" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5283, 617)
 
-[node name="Goblin6" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin6" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5287, 771)
 
-[node name="Goblin2" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin2" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5429, 348)
 
-[node name="Goblin7" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin7" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5131, 707)
 
-[node name="Goblin8" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin8" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5017, 645)
 
-[node name="Goblin9" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin9" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5021, 799)
 
-[node name="Goblin10" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin10" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5163, 376)
 
-[node name="Goblin11" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin11" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5049, 314)
 
-[node name="Goblin12" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin12" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5053, 468)
 
-[node name="Goblin3" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin3" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5315, 286)
 
-[node name="Goblin" parent="." instance=ExtResource("25_tpdc5")]
+[node name="Goblin" parent="GoblinArmy" instance=ExtResource("25_tpdc5")]
+visible = false
 position = Vector2(5319, 440)
 
 [node name="KnightUnitRed" type="Node2D" parent="." groups=["Red"]]
+visible = false
 position = Vector2(888, 888)
 script = ExtResource("27_dr8ji")
 
@@ -919,6 +1263,7 @@ position = Vector2(120, -144)
 position = Vector2(231, -6)
 
 [node name="KnightUnitBlue" type="Node2D" parent="." groups=["Blue"]]
+visible = false
 position = Vector2(444, 444)
 script = ExtResource("27_dr8ji")
 
@@ -959,6 +1304,7 @@ position = Vector2(-37, 435)
 position = Vector2(52, 203)
 
 [node name="RTS-Node" type="Node2D" parent="."]
+visible = false
 script = ExtResource("22_fop6k")
 
 [node name="LongLeftClickTimer" type="Timer" parent="RTS-Node"]
@@ -971,6 +1317,7 @@ one_shot = true
 shape = SubResource("RectangleShape2D_wqguj")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(576, -9)
 script = ExtResource("26_88kjh")
 
