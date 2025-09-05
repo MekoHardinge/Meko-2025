@@ -759,6 +759,11 @@ avoidance_enabled = true
 neighbor_distance = 2346.4
 max_neighbors = 12
 max_speed = 100.6
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0, 0.443137, 0.901961, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
