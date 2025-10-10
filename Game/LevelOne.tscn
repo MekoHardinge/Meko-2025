@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://cbnxgk4yjoxsk"]
+[gd_scene load_steps=102 format=3 uid="uid://cbnxgk4yjoxsk"]
 
 [ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="1_5ya0u"]
 [ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="2_j6g7o"]
@@ -42,8 +42,10 @@
 [ext_resource type="Script" path="res://KnightUnit.gd" id="36_idkt4"]
 [ext_resource type="PackedScene" uid="uid://ckfdt4pk6ssyc" path="res://knightRed.tscn" id="37_r1gk6"]
 [ext_resource type="PackedScene" uid="uid://dkyj1g4j0dfa8" path="res://KightBlue.tscn" id="38_qyuv1"]
+[ext_resource type="Script" path="res://GoblinFormation.gd" id="39_qm3sf"]
 [ext_resource type="Script" path="res://RTS-Node.gd" id="39_ummg3"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="40_25ejk"]
+[ext_resource type="Script" path="res://IndividualGoblin.gd" id="41_jldot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6udl7"]
 texture = ExtResource("1_5ya0u")
@@ -872,107 +874,66 @@ script = ExtResource("34_6k6o0")
 scale = Vector2(1.10883, 0.997134)
 navigation_polygon = SubResource("NavigationPolygon_uwmk6")
 
-[node name="GoblinArmy" type="Node" parent="."]
-
-[node name="Goblin13" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4895, 697)
-
-[node name="Goblin14" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4781, 635)
-
-[node name="Goblin15" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4785, 789)
-
-[node name="Goblin16" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4927, 366)
-
-[node name="Goblin17" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4629, 725)
-
-[node name="Goblin18" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4515, 663)
-
-[node name="Goblin19" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4519, 817)
-
-[node name="Goblin20" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4661, 394)
-
-[node name="Goblin21" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4547, 332)
-
-[node name="Goblin22" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4551, 486)
-
-[node name="Goblin23" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4813, 304)
-
-[node name="Goblin24" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(4817, 458)
-
-[node name="Goblin4" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5397, 679)
-
-[node name="Goblin5" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5283, 617)
-
-[node name="Goblin6" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5287, 771)
-
-[node name="Goblin2" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5429, 348)
-
-[node name="Goblin7" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5131, 707)
-
-[node name="Goblin8" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5017, 645)
-
-[node name="Goblin9" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5021, 799)
-
-[node name="Goblin10" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5163, 376)
-
-[node name="Goblin11" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5049, 314)
-
-[node name="Goblin12" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5053, 468)
-
-[node name="Goblin3" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5315, 286)
+[node name="GoblinArmy" type="Node2D" parent="."]
+script = ExtResource("39_qm3sf")
+spacing = 75.0
+hold_spacing_mul = 1.0
+advance_spacing_mul = 1.3
+flank_spacing_mul = 1.5
+debug_summary_interval = 5.0
 
 [node name="Goblin" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
-visible = false
-position = Vector2(5319, 440)
+position = Vector2(5295, 304)
+script = ExtResource("41_jldot")
+
+[node name="Goblin2" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5215, 424)
+script = ExtResource("41_jldot")
+
+[node name="Goblin3" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5303, 568)
+script = ExtResource("41_jldot")
+
+[node name="Goblin4" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5383, 432)
+script = ExtResource("41_jldot")
+
+[node name="Goblin5" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5174, 664)
+script = ExtResource("41_jldot")
+
+[node name="Goblin6" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5094, 784)
+script = ExtResource("41_jldot")
+
+[node name="Goblin7" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5182, 928)
+script = ExtResource("41_jldot")
+
+[node name="Goblin8" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5071, 456)
+script = ExtResource("41_jldot")
+
+[node name="Goblin9" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(5151, 320)
+script = ExtResource("41_jldot")
+
+[node name="Goblin10" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(4942, 552)
+script = ExtResource("41_jldot")
+
+[node name="Goblin11" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(4862, 672)
+script = ExtResource("41_jldot")
+
+[node name="Goblin12" parent="GoblinArmy" instance=ExtResource("35_wg2n0")]
+position = Vector2(4950, 816)
+script = ExtResource("41_jldot")
 
 [node name="KnightUnitRed" type="Node2D" parent="." groups=["Red"]]
 position = Vector2(888, 888)
 script = ExtResource("36_idkt4")
+formation_id = "Red"
 
 [node name="KnightRed4" parent="KnightUnitRed" instance=ExtResource("37_r1gk6")]
 position = Vector2(18, 15)
@@ -1013,6 +974,7 @@ position = Vector2(231, -6)
 [node name="KnightUnitBlue" type="Node2D" parent="." groups=["Blue"]]
 position = Vector2(444, 444)
 script = ExtResource("36_idkt4")
+formation_id = "Blue"
 
 [node name="KnightBlue11" parent="KnightUnitBlue" instance=ExtResource("38_qyuv1")]
 position = Vector2(237, -176)
