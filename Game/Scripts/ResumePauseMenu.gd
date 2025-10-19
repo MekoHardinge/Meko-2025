@@ -11,4 +11,7 @@ func _on_button_down():
 func _on_pressed():
 	$"..".visible = false
 	$"../../Camera2D".visible = true
+	$"../../GoblinArmy".visible = true
+	$"../../KnightUnitRed".visible = true
+	$"../../KnightUnitBlue".visible = true
 	print("Clicked")

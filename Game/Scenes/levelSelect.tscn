@@ -1,52 +1,52 @@
 [gd_scene load_steps=69 format=3 uid="uid://b50v7r1udqo8g"]
 
-[ext_resource type="Texture2D" uid="uid://cnie2cudida6s" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_01.png" id="1_seufa"]
-[ext_resource type="Texture2D" uid="uid://biyvchl6atj6r" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_02.png" id="2_ylemp"]
-[ext_resource type="Texture2D" uid="uid://cjtsj7vea5b1b" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="3_f8exm"]
-[ext_resource type="Texture2D" uid="uid://cklit1aanuoq7" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_03.png" id="3_qysx0"]
-[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="4_7m1ct"]
-[ext_resource type="Script" path="res://BackButton.gd" id="4_qk2hr"]
-[ext_resource type="Texture2D" uid="uid://cmmtnbvaheh5s" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_04.png" id="4_xrljn"]
-[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="5_hl08a"]
-[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="5_kktob"]
-[ext_resource type="Script" path="res://QuitButton.gd" id="5_kmder"]
-[ext_resource type="Script" path="res://Button.gd" id="6_86est"]
-[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="6_fjt31"]
-[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="6_sj6k0"]
-[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="7_n6i7m"]
-[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="7_rsqdm"]
-[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="8_63gih"]
-[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="8_t61fk"]
-[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="9_etbtl"]
-[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="9_vw2tm"]
-[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="10_7ob6y"]
-[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="11_4iy7s"]
-[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="11_xuhb4"]
-[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="12_btqab"]
-[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="14_7kppb"]
-[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="15_5s37q"]
-[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="16_2fcy1"]
-[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="17_kvvwb"]
-[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="18_rs78c"]
-[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="19_j3ikp"]
-[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="20_lc8cp"]
-[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="21_2pv25"]
-[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="22_v5ua0"]
-[ext_resource type="FontFile" uid="uid://1gqidym2xmnv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/ITC Benguiat Condensed Bold.otf" id="30_laor2"]
-[ext_resource type="Texture2D" uid="uid://dnvqkvo2hbtam" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_3Slides.png" id="31_80hcv"]
-[ext_resource type="Texture2D" uid="uid://c8ag3gfyk36qv" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="32_hndes"]
+[ext_resource type="FontFile" uid="uid://1gqidym2xmnv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/ITC Benguiat Condensed Bold.otf" id="1_ripff"]
+[ext_resource type="Texture2D" uid="uid://dnvqkvo2hbtam" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_3Slides.png" id="2_r5j0f"]
+[ext_resource type="Texture2D" uid="uid://c8ag3gfyk36qv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="3_saddc"]
+[ext_resource type="Script" path="res://Scripts/BackButton.gd" id="4_oo4kx"]
+[ext_resource type="Script" path="res://Scripts/QuitButton.gd" id="5_kfqbl"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="6_4cf4r"]
+[ext_resource type="Texture2D" uid="uid://cnie2cudida6s" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks_01.png" id="7_sai51"]
+[ext_resource type="Texture2D" uid="uid://biyvchl6atj6r" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks_02.png" id="8_y42p4"]
+[ext_resource type="Texture2D" uid="uid://cjtsj7vea5b1b" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="9_gldeh"]
+[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="10_h1s5t"]
+[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="11_5h027"]
+[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="12_cwlel"]
+[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="13_l653v"]
+[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="14_w6a8c"]
+[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="15_fl471"]
+[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="16_m362x"]
+[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="17_6bywm"]
+[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="18_3adkn"]
+[ext_resource type="Texture2D" uid="uid://cklit1aanuoq7" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks_03.png" id="19_3bsed"]
+[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="20_r1b2i"]
+[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="21_lxvid"]
+[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="22_csp7g"]
+[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="23_d7d3a"]
+[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="24_nm5lc"]
+[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="25_hjt3w"]
+[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="26_erpmj"]
+[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="27_43cgb"]
+[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="28_4q415"]
+[ext_resource type="Texture2D" uid="uid://cmmtnbvaheh5s" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Rocks_04.png" id="29_kb3oj"]
+[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="30_33c1t"]
+[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="31_nviqv"]
+[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="32_aulr4"]
+[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="33_a8x8a"]
+[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="34_u8eed"]
+[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="35_2x87u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ubhl"]
-texture = ExtResource("31_80hcv")
+texture = ExtResource("2_r5j0f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_roe41"]
-texture = ExtResource("31_80hcv")
+texture = ExtResource("2_r5j0f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twqrv"]
-texture = ExtResource("32_hndes")
+texture = ExtResource("3_saddc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaurx"]
-texture = ExtResource("1_seufa")
+texture = ExtResource("7_sai51")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_speed = 7.0
 0:0/animation_frame_0/duration = 1.0
@@ -84,7 +84,7 @@ texture_region_size = Vector2i(128, 128)
 15:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbjq8"]
-texture = ExtResource("2_ylemp")
+texture = ExtResource("8_y42p4")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_speed = 7.0
 0:0/animation_frame_0/duration = 1.0
@@ -122,59 +122,59 @@ texture_region_size = Vector2i(128, 128)
 15:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iougm"]
-texture = ExtResource("3_f8exm")
+texture = ExtResource("9_gldeh")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rj3co"]
-texture = ExtResource("4_7m1ct")
+texture = ExtResource("10_h1s5t")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8hf6"]
-texture = ExtResource("5_hl08a")
+texture = ExtResource("11_5h027")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0sjl"]
-texture = ExtResource("6_fjt31")
+texture = ExtResource("12_cwlel")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5fkvc"]
-texture = ExtResource("7_n6i7m")
+texture = ExtResource("13_l653v")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_frh6n"]
-texture = ExtResource("8_t61fk")
+texture = ExtResource("14_w6a8c")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifu23"]
-texture = ExtResource("9_vw2tm")
+texture = ExtResource("15_fl471")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_auh7y"]
-texture = ExtResource("10_7ob6y")
+texture = ExtResource("16_m362x")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sl6ef"]
-texture = ExtResource("11_xuhb4")
+texture = ExtResource("17_6bywm")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gi7tu"]
-texture = ExtResource("12_btqab")
+texture = ExtResource("18_3adkn")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvd7n"]
-texture = ExtResource("3_qysx0")
+texture = ExtResource("19_3bsed")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_speed = 7.0
 0:0/animation_frame_0/duration = 1.0
@@ -212,49 +212,49 @@ texture_region_size = Vector2i(128, 128)
 15:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47fkw"]
-texture = ExtResource("14_7kppb")
+texture = ExtResource("20_r1b2i")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx1sr"]
-texture = ExtResource("15_5s37q")
+texture = ExtResource("21_lxvid")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7vrl6"]
-texture = ExtResource("16_2fcy1")
+texture = ExtResource("22_csp7g")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46xdd"]
-texture = ExtResource("17_kvvwb")
+texture = ExtResource("23_d7d3a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp6e0"]
-texture = ExtResource("18_rs78c")
+texture = ExtResource("24_nm5lc")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ly1vd"]
-texture = ExtResource("19_j3ikp")
+texture = ExtResource("25_hjt3w")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysxma"]
-texture = ExtResource("20_lc8cp")
+texture = ExtResource("26_erpmj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pcm56"]
-texture = ExtResource("21_2pv25")
+texture = ExtResource("27_43cgb")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26xka"]
-texture = ExtResource("22_v5ua0")
+texture = ExtResource("28_4q415")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 0:1/0 = 0
@@ -263,7 +263,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw2dl"]
-texture = ExtResource("4_xrljn")
+texture = ExtResource("29_kb3oj")
 texture_region_size = Vector2i(1, 1)
 0:0/animation_speed = 7.0
 0:0/animation_frame_0/duration = 1.0
@@ -301,12 +301,12 @@ texture_region_size = Vector2i(1, 1)
 15:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgsho"]
-texture = ExtResource("5_kktob")
+texture = ExtResource("30_33c1t")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uun35"]
-texture = ExtResource("6_sj6k0")
+texture = ExtResource("31_nviqv")
 texture_region_size = Vector2i(64, 64)
 1:0/animation_separation = Vector2i(2, 0)
 1:0/animation_speed = 7.0
@@ -355,7 +355,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7kpn8"]
-texture = ExtResource("7_rsqdm")
+texture = ExtResource("32_aulr4")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 0:1/0 = 0
@@ -364,7 +364,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huidk"]
-texture = ExtResource("8_63gih")
+texture = ExtResource("33_a8x8a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -396,7 +396,7 @@ texture_region_size = Vector2i(64, 64)
 3:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_olrr6"]
-texture = ExtResource("9_etbtl")
+texture = ExtResource("34_u8eed")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 2:0/0 = 0
@@ -434,7 +434,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8fvcl"]
-texture = ExtResource("11_4iy7s")
+texture = ExtResource("35_2x87u")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -496,7 +496,7 @@ offset_left = -146.0
 offset_top = -312.0
 offset_right = 134.0
 offset_bottom = -275.0
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 30
 text = "TideBorn"
 horizontal_alignment = 1
@@ -508,7 +508,7 @@ offset_left = -146.0
 offset_top = -312.0
 offset_right = 134.0
 offset_bottom = -275.0
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 30
 text = "TideBorn"
 horizontal_alignment = 1
@@ -523,13 +523,13 @@ offset_bottom = -176.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_3ubhl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_roe41")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_twqrv")
-script = ExtResource("4_qk2hr")
+script = ExtResource("4_oo4kx")
 
 [node name="BackText" type="Label" parent="Camera2D/BackButton"]
 layout_mode = 0
 offset_right = 288.0
 offset_bottom = 72.0
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 horizontal_alignment = 1
@@ -544,13 +544,13 @@ offset_bottom = -176.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_3ubhl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_roe41")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_twqrv")
-script = ExtResource("5_kmder")
+script = ExtResource("5_kfqbl")
 
 [node name="QuitText" type="Label" parent="Camera2D/QuitButton"]
 layout_mode = 0
 offset_right = 288.0
 offset_bottom = 72.0
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 horizontal_alignment = 1
@@ -563,7 +563,7 @@ offset_right = 142.0
 offset_bottom = -184.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 35
 text = "Level Select"
 horizontal_alignment = 1
@@ -581,85 +581,92 @@ offset_top = 264.0
 offset_right = 256.0
 offset_bottom = 392.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 1"
-script = ExtResource("6_86est")
+script = ExtResource("6_4cf4r")
 
 [node name="Button2" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_top = 264.0
 offset_right = 512.0
 offset_bottom = 392.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 640.0
 offset_top = 264.0
 offset_right = 768.0
 offset_bottom = 392.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 3"
 
 [node name="Button4" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 896.0
 offset_top = 264.0
 offset_right = 1024.0
 offset_bottom = 392.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 4"
 
 [node name="Button5" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 128.0
 offset_top = 520.0
 offset_right = 256.0
 offset_bottom = 648.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 5"
 
 [node name="Button6" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_top = 520.0
 offset_right = 512.0
 offset_bottom = 648.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 6"
 
 [node name="Button7" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 640.0
 offset_top = 520.0
 offset_right = 768.0
 offset_bottom = 648.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 7"
 
 [node name="Button8" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 896.0
 offset_top = 520.0
 offset_right = 1024.0
 offset_bottom = 648.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("30_laor2")
+theme_override_fonts/font = ExtResource("1_ripff")
 theme_override_font_sizes/font_size = 20
 text = "Level 8"
 
@@ -670,7 +677,7 @@ position = Vector2(576, 328)
 tile_set = SubResource("TileSet_xs2ki")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65545, 4, 0, -65544, 4, 0, -8, 4, 0, -7, 4, 0, -6, 4, 0, 65531, 4, 0, 65532, 4, 0, 131069, 4, 0, 196606, 4, 0, 196607, 4, 0, 196608, 4, 0, 196609, 4, 0, 262146, 4, 0, 262147, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, -327689, 4, 0, -262153, 4, 0, -196617, 4, 0, -131081, 4, 0, -9, 4, 0, 65527, 4, 0, 131063, 4, 0, 196599, 4, 0, 262135, 4, 0, 327671, 4, 0, 393207, 4, 0, -327688, 4, 0, -262152, 4, 0, -196616, 4, 0, -131080, 4, 0, 65528, 4, 0, 131064, 4, 0, 196600, 4, 0, 262136, 4, 0, 327672, 4, 0, 393208, 4, 0, -327687, 4, 0, -262151, 4, 0, -196615, 4, 0, -131079, 4, 0, -65543, 4, 0, 65529, 4, 0, 131065, 4, 0, 196601, 4, 0, 262137, 4, 0, 327673, 4, 0, 393209, 4, 0, -327686, 4, 0, -262150, 4, 0, -196614, 4, 0, -131078, 4, 0, -65542, 4, 0, 65530, 4, 0, 131066, 4, 0, 196602, 4, 0, 262138, 4, 0, 327674, 4, 0, 393210, 4, 0, -327685, 4, 0, -262149, 4, 0, -196613, 4, 0, -131077, 4, 0, -65541, 4, 0, -5, 4, 0, 131067, 4, 0, 196603, 4, 0, 262139, 4, 0, 327675, 4, 0, 393211, 4, 0, -327684, 4, 0, -262148, 4, 0, -196612, 4, 0, -131076, 4, 0, -65540, 4, 0, -4, 4, 0, 131068, 4, 0, 196604, 4, 0, 262140, 4, 0, 327676, 4, 0, 393212, 4, 0, -327683, 4, 0, -262147, 4, 0, -196611, 4, 0, -131075, 4, 0, -65539, 4, 0, -3, 4, 0, 65533, 4, 0, 196605, 4, 0, 262141, 4, 0, 327677, 4, 0, 393213, 4, 0, -327682, 4, 0, -262146, 4, 0, -196610, 4, 0, -131074, 4, 0, -65538, 4, 0, -2, 4, 0, 65534, 4, 0, 131070, 4, 0, 262142, 4, 0, 327678, 4, 0, 393214, 4, 0, -327681, 4, 0, -262145, 4, 0, -196609, 4, 0, -131073, 4, 0, -65537, 4, 0, -1, 4, 0, 65535, 4, 0, 131071, 4, 0, 262143, 4, 0, 327679, 4, 0, 393215, 4, 0, -393216, 4, 0, -327680, 4, 0, -262144, 4, 0, -196608, 4, 0, -131072, 4, 0, -65536, 4, 0, 0, 4, 0, 65536, 4, 0, 131072, 4, 0, 262144, 4, 0, 327680, 4, 0, -393215, 4, 0, -327679, 4, 0, -262143, 4, 0, -196607, 4, 0, -131071, 4, 0, -65535, 4, 0, 1, 4, 0, 65537, 4, 0, 131073, 4, 0, 262145, 4, 0, 327681, 4, 0, -393214, 4, 0, -327678, 4, 0, -262142, 4, 0, -196606, 4, 0, -131070, 4, 0, -65534, 4, 0, 2, 4, 0, 65538, 4, 0, 131074, 4, 0, 196610, 4, 0, 327682, 4, 0, -393213, 4, 0, -327677, 4, 0, -262141, 4, 0, -196605, 4, 0, -131069, 4, 0, -65533, 4, 0, 3, 4, 0, 65539, 4, 0, 131075, 4, 0, 196611, 4, 0, 327683, 4, 0, -393212, 4, 0, -327676, 4, 0, -262140, 4, 0, -196604, 4, 0, -131068, 4, 0, -65532, 4, 0, 4, 4, 0, 65540, 4, 0, 131076, 4, 0, 196612, 4, 0, 262148, 4, 0, -393211, 4, 0, -327675, 4, 0, -262139, 4, 0, -196603, 4, 0, -131067, 4, 0, -65531, 4, 0, 5, 4, 0, 65541, 4, 0, 131077, 4, 0, 196613, 4, 0, 262149, 4, 0, -393210, 4, 0, -327674, 4, 0, -262138, 4, 0, -196602, 4, 0, -131066, 4, 0, -65530, 4, 0, 6, 4, 0, 65542, 4, 0, 131078, 4, 0, 196614, 4, 0, 262150, 4, 0, -393209, 4, 0, -327673, 4, 0, -262137, 4, 0, -196601, 4, 0, -131065, 4, 0, -65529, 4, 0, 7, 4, 0, 65543, 4, 0, 131079, 4, 0, 196615, 4, 0, 262151, 4, 0, 327687, 4, 0, -393208, 4, 0, -327672, 4, 0, -262136, 4, 0, -196600, 4, 0, -131064, 4, 0, -65528, 4, 0, 8, 4, 0, 65544, 4, 0, 131080, 4, 0, 196616, 4, 0, 262152, 4, 0, 327688, 4, 0, -393207, 4, 0, -327671, 4, 0, -262135, 4, 0, -196599, 4, 0, -131063, 4, 0, -65527, 4, 0, 9, 4, 0, 65545, 4, 0, 131081, 4, 0, 196617, 4, 0, 262153, 4, 0, 327689, 4, 0, -393226, 4, 0, -327690, 4, 0, -262154, 4, 0, -196618, 4, 0, -131082, 4, 0, -65546, 4, 0, -10, 4, 0, 65526, 4, 0, 131062, 4, 0, 196598, 4, 0, 262134, 4, 0, 327670, 4, 0, 393206, 4, 0, 458742, 4, 0)
-layer_1/tile_data = PackedInt32Array(262137, 65541, 1, 327673, 65541, 1, 262138, 65541, 1, 327674, 65541, 1, -7, 65541, 1, 65529, 65541, 1, -6, 65541, 1, 65530, 65541, 1, -3, 65541, 1, 65533, 65541, 1, -2, 65541, 1, 65534, 65541, 1, -65535, 65541, 1, 1, 65541, 1, -65534, 65541, 1, 2, 65541, 1, -65531, 65541, 1, 5, 65541, 1, -65530, 65541, 1, 6, 65541, 1, 196613, 65541, 1, 262149, 65541, 1, 196614, 65541, 1, 262150, 65541, 1, 196609, 65541, 1, 262145, 65541, 1, 196610, 65541, 1, 262146, 65541, 1, 262141, 65541, 1, 327677, 65541, 1, 262142, 65541, 1, 327678, 65541, 1, 196605, 65541, 0, 196606, 65541, 0, 131073, 65541, 0, 131074, 65541, 0, 131077, 65541, 0, 131078, 65541, 0, -131067, 65541, 0, -131066, 65541, 0, -131071, 65541, 0, -131070, 65541, 0, -65539, 65541, 0, -65538, 65541, 0, -65543, 65541, 0, -65542, 65541, 0, 196601, 65541, 0, 196602, 65541, 0, -5, 131077, 1, 65531, 131077, 1, -1, 131077, 1, 65535, 131077, 1, -65533, 131077, 1, 3, 131077, 1, -65529, 131077, 1, 7, 131077, 1, 196615, 131077, 1, 262151, 131077, 1, 196611, 131077, 1, 262147, 131077, 1, 262143, 131077, 1, 327679, 131077, 1, 262139, 131077, 1, 327675, 131077, 1, 393209, 65541, 2, 393210, 65541, 2, 393213, 65541, 2, 393214, 65541, 2, 327681, 65541, 2, 327682, 65541, 2, 327685, 65541, 2, 327686, 65541, 2, 65541, 65541, 2, 65542, 65541, 2, 65537, 65541, 2, 65538, 65541, 2, 131069, 65541, 2, 131070, 65541, 2, 131065, 65541, 2, 131066, 65541, 2, -8, 5, 1, 65528, 5, 1, 262136, 5, 1, 327672, 5, 1, -4, 5, 1, 65532, 5, 1, 262140, 5, 1, 327676, 5, 1, -65536, 5, 1, 0, 5, 1, 196608, 5, 1, 262144, 5, 1, -65532, 5, 1, 4, 5, 1, 196612, 5, 1, 262148, 5, 1)
+layer_1/tile_data = PackedInt32Array(-7, 65541, 1, 65529, 65541, 1, -6, 65541, 1, 65530, 65541, 1, -65543, 65541, 0, -65542, 65541, 0, -5, 131077, 1, 65531, 131077, 1, 131065, 65541, 2, 131066, 65541, 2, -8, 5, 1, 65528, 5, 1)
 layer_2/tile_data = PackedInt32Array(-7, 8, 0, -6, 131080, 0, -3, 8, 0, -2, 131080, 0, -65535, 8, 0, -65534, 131080, 0, -65531, 8, 0, -65530, 131080, 0, 65529, 8, 2, 65533, 8, 2, 1, 8, 2, 5, 8, 2, 65530, 131080, 2, 65534, 131080, 2, 2, 131080, 2, 6, 131080, 2, 327674, 131080, 2, 327673, 8, 2, 262137, 8, 0, 262138, 131080, 0, 327677, 8, 2, 327678, 131080, 2, 262141, 8, 0, 262142, 131080, 0, 196609, 8, 0, 196613, 8, 0, 262146, 131080, 2, 262150, 131080, 2, 262145, 8, 2, 262149, 8, 2, 196610, 131080, 0, 196614, 131080, 0)
 layer_3/tile_data = PackedInt32Array(-196615, 9, 1, -131079, 9, 2, -131078, 65545, 2, -131077, 65545, 2, -131076, 65545, 2, -131075, 65545, 2, -131074, 65545, 2, -131073, 65545, 2, -196608, 65545, 2, -196607, 65545, 2, -196606, 65545, 2, -196605, 65545, 2, -196604, 65545, 2, -196603, 65545, 2, -196602, 131081, 2, -262138, 131081, 1, -327674, 131081, 0, -262151, 9, 0, -262150, 65545, 0, -262149, 65545, 0, -262148, 65545, 0, -262147, 65545, 0, -262146, 65545, 0, -262145, 65545, 0, -327680, 65545, 0, -327679, 65545, 0, -327678, 65545, 0, -327677, 65545, 0, -327676, 65545, 0, -327675, 65545, 0, -262139, 65545, 1, -262140, 65545, 1, -262141, 65545, 1, -262142, 65545, 1, -262143, 65545, 1, -262144, 65545, 1, -196609, 65545, 1, -196610, 65545, 1, -196611, 65545, 1, -196612, 65545, 1, -196613, 65545, 1, -196614, 65545, 1, -6, 13, 0, -65534, 12, 0, 65529, 15, 0, 65533, 13, 0, -2, 23, 0, -65535, 25, 0, -65530, 26, 0, 6, 26, 1, -65531, 22, 0, 262137, 28, 1, 196602, 65564, 0, 262138, 65564, 1, 327674, 65564, 2, 262139, 131100, 1, 327673, 21, 0, 196609, 27, 0, 262145, 27, 1, 196610, 24, 0, 262141, 20, 0, 262142, 18, 0, 327678, 23, 0, 196613, 22, 0, 262150, 25, 0, 196614, 16, 0)
 layer_4/tile_data = PackedInt32Array(-262145, 65546, 0, -327680, 65546, 0, -327679, 65546, 0, -262146, 65546, 0, -262147, 10, 0, -327678, 131082, 0, -196601, 3, 0, -65545, 2, 0, 131075, 1, 0, 131068, 0, 0, 262152, 0, 0, 327671, 3, 0, -131072, 1, 0)

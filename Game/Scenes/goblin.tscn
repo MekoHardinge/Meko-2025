@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://d1gd82e1vlxgv"]
 
-[ext_resource type="Script" path="res://goblin.gd" id="1_k5syv"]
-[ext_resource type="Texture2D" uid="uid://b7eth60sql11o" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_em1oa"]
+[ext_resource type="Script" path="res://Scripts/goblin.gd" id="1_k5syv"]
+[ext_resource type="Texture2D" uid="uid://b7eth60sql11o" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_em1oa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o282l"]
 atlas = ExtResource("2_em1oa")
@@ -259,7 +259,7 @@ script = ExtResource("1_k5syv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_oqeon")
-animation = &"AttackDown"
+animation = &"Walk"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 40.0

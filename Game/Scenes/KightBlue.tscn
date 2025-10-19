@@ -1,7 +1,7 @@
 [gd_scene load_steps=102 format=3 uid="uid://dkyj1g4j0dfa8"]
 
-[ext_resource type="Script" path="res://BlueKnight.gd" id="1_arygf"]
-[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_yemwn"]
+[ext_resource type="Script" path="res://Scripts/BlueKnight.gd" id="1_arygf"]
+[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_yemwn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8sygw"]
 atlas = ExtResource("1_yemwn")
@@ -738,8 +738,7 @@ script = ExtResource("1_arygf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_7yotu")
-animation = &"AttackRight2"
-frame_progress = 0.774766
+animation = &"Walk"
 
 [node name="Label" type="Label" parent="."]
 offset_left = -8.0

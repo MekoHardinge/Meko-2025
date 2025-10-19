@@ -1,55 +1,53 @@
-[gd_scene load_steps=93 format=3 uid="uid://dgjhin08dxir4"]
+[gd_scene load_steps=95 format=3 uid="uid://dgjhin08dxir4"]
 
-[ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="1_iq2nv"]
-[ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="2_5dmkn"]
-[ext_resource type="Texture2D" uid="uid://dmf424l66g7yx" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Right.png" id="3_afcmf"]
-[ext_resource type="Texture2D" uid="uid://cow8ugqq85e5d" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Up.png" id="4_gjx12"]
-[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="5_3y4e3"]
-[ext_resource type="Texture2D" uid="uid://di15niehl3eug" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Vertical.png" id="6_gipap"]
-[ext_resource type="Texture2D" uid="uid://bbsbq00m1xusx" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="7_k6avn"]
-[ext_resource type="Texture2D" uid="uid://bobuubh10sfbq" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="8_ib6ic"]
-[ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="9_y7fry"]
-[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="10_bgar0"]
-[ext_resource type="Texture2D" uid="uid://cjtsj7vea5b1b" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="10_tihdc"]
-[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="11_csshk"]
-[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="12_rnbbo"]
-[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="13_k0aod"]
-[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="14_n3nah"]
-[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="15_58g0f"]
-[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="16_ubpfs"]
-[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="17_mnfbl"]
-[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="18_rch7k"]
-[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="19_e5dks"]
-[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="20_pje4t"]
-[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="21_8lda3"]
-[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="22_fr331"]
-[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="23_hhqhc"]
-[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="24_rg85s"]
-[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="25_crkhd"]
-[ext_resource type="Texture2D" uid="uid://dduad6uvbo77y" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Resources/Sheep/HappySheep_All.png" id="26_awp5w"]
-[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="27_kw3jx"]
-[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="27_rlw3v"]
-[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="28_xq0m3"]
-[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="29_327gm"]
-[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="30_ec1r0"]
-[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="31_lg3xa"]
-[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="32_nd2w2"]
-[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="33_g7rsi"]
-[ext_resource type="Script" path="res://Quit.gd" id="36_4txen"]
-[ext_resource type="FontFile" uid="uid://1gqidym2xmnv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/ITC Benguiat Condensed Bold.otf" id="37_131tx"]
-[ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="40_7rvgb"]
-[ext_resource type="Script" path="res://Credits.gd" id="40_fsk88"]
-[ext_resource type="Texture2D" uid="uid://dnvqkvo2hbtam" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_3Slides.png" id="41_2l83r"]
-[ext_resource type="Script" path="res://LevelSelect.gd" id="41_ak5j2"]
-[ext_resource type="Texture2D" uid="uid://b70f7l33inoe6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/9drg28.jpg" id="41_p87bh"]
-[ext_resource type="Texture2D" uid="uid://c8ag3gfyk36qv" path="res://Meko 2025/Meko-2025/Game/Meko 2025/Meko-2025/Game/Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="42_m1bip"]
-[ext_resource type="Script" path="res://HowToPlay.gd" id="42_yfot3"]
-[ext_resource type="Texture2D" uid="uid://c4uw46pxvatas" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Snapchat-2122017956.jpg" id="43_o80fi"]
-[ext_resource type="Script" path="res://BackButtonMainMenu.gd" id="44_7qsna"]
-[ext_resource type="Texture2D" uid="uid://bbvb2ljf82yx8" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/IMG_4747.jpeg" id="46_5g6kt"]
+[ext_resource type="Texture2D" uid="uid://cdwslv2nsekhm" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Down.png" id="1_ucmor"]
+[ext_resource type="Texture2D" uid="uid://b3ctqo7ifhdf3" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Left.png" id="2_vwq2o"]
+[ext_resource type="Texture2D" uid="uid://dmf424l66g7yx" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Right.png" id="3_0cyg8"]
+[ext_resource type="Texture2D" uid="uid://cow8ugqq85e5d" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Up.png" id="4_xl4nk"]
+[ext_resource type="Texture2D" uid="uid://k23qurogiyyr" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="5_aeox8"]
+[ext_resource type="Texture2D" uid="uid://di15niehl3eug" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Vertical.png" id="6_j4hyl"]
+[ext_resource type="Texture2D" uid="uid://bbsbq00m1xusx" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="7_hk38j"]
+[ext_resource type="Texture2D" uid="uid://bobuubh10sfbq" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="8_42l68"]
+[ext_resource type="Texture2D" uid="uid://hphrtsb0reta" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_Regular.png" id="9_j63af"]
+[ext_resource type="Texture2D" uid="uid://cjtsj7vea5b1b" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="10_v58bk"]
+[ext_resource type="FontFile" uid="uid://1gqidym2xmnv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Font/ITC Benguiat Condensed Bold.otf" id="11_e7pd2"]
+[ext_resource type="Texture2D" uid="uid://dyu5x7hbmw38f" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="12_0hnqp"]
+[ext_resource type="Texture2D" uid="uid://m6j7225rsn0w" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="13_05fhs"]
+[ext_resource type="Texture2D" uid="uid://ufiha2bjj3sf" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/08.png" id="14_m3tqt"]
+[ext_resource type="Texture2D" uid="uid://7xb157reld8l" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/09.png" id="15_7w3i1"]
+[ext_resource type="Texture2D" uid="uid://da86d82ug8l3e" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/10.png" id="16_7xeo4"]
+[ext_resource type="Texture2D" uid="uid://ddjae0iak866g" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/11.png" id="17_eqomj"]
+[ext_resource type="Texture2D" uid="uid://uldcw24jip4c" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/12.png" id="18_yxfx4"]
+[ext_resource type="Texture2D" uid="uid://cekmd8ssqvc15" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/13.png" id="19_mpkou"]
+[ext_resource type="Texture2D" uid="uid://ddt3l5mocbrae" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/14.png" id="20_8cae4"]
+[ext_resource type="Texture2D" uid="uid://7p2fr03vabmj" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/15.png" id="21_sn1er"]
+[ext_resource type="Texture2D" uid="uid://c0m51wlog4lm0" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/16.png" id="22_au4hh"]
+[ext_resource type="Texture2D" uid="uid://4go8svlpb1bc" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/17.png" id="23_5w56h"]
+[ext_resource type="Texture2D" uid="uid://buv1oxkyumh2y" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="24_1mwnw"]
+[ext_resource type="Texture2D" uid="uid://cvl45a54o5oei" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/18.png" id="25_rtp7u"]
+[ext_resource type="Texture2D" uid="uid://cml0d3vr13kqs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="26_ropy3"]
+[ext_resource type="Texture2D" uid="uid://bmy3cbqpxnh01" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="27_duiuf"]
+[ext_resource type="Texture2D" uid="uid://dduad6uvbo77y" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Resources/Sheep/HappySheep_All.png" id="28_t0mj2"]
+[ext_resource type="Texture2D" uid="uid://defu48fqq84au" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="29_blxx5"]
+[ext_resource type="Texture2D" uid="uid://bwnx0afsjed7p" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/01.png" id="30_qdnn6"]
+[ext_resource type="Texture2D" uid="uid://b82iw8x6yyo0h" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/02.png" id="31_3gshy"]
+[ext_resource type="Texture2D" uid="uid://k4pkq1dbvp4a" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/03.png" id="32_80p8o"]
+[ext_resource type="Texture2D" uid="uid://dhd2nyht2tm8" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/04.png" id="33_d3iow"]
+[ext_resource type="Texture2D" uid="uid://b5vtk3bdnc7cs" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/05.png" id="34_qqi3j"]
+[ext_resource type="Texture2D" uid="uid://d1d6wq7n7qrsu" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/06.png" id="35_e42an"]
+[ext_resource type="Texture2D" uid="uid://bxkwv3v520lb6" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Deco/07.png" id="36_w6xwj"]
+[ext_resource type="Texture2D" uid="uid://dnvqkvo2hbtam" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_3Slides.png" id="37_sau8e"]
+[ext_resource type="Texture2D" uid="uid://c8ag3gfyk36qv" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="38_v7qtu"]
+[ext_resource type="Script" path="res://Scripts/Quit.gd" id="39_45euw"]
+[ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="40_0tdbm"]
+[ext_resource type="Script" path="res://Scripts/HowToPlay.gd" id="41_ebr1l"]
+[ext_resource type="Script" path="res://Scripts/Credits.gd" id="42_e54cu"]
+[ext_resource type="Texture2D" uid="uid://bxu4w5eow01od" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/UI/Buttons/Button_Disable_9Slides.png" id="43_y71td"]
+[ext_resource type="Script" path="res://Scripts/BackButtonMainMenu.gd" id="44_yeye1"]
+[ext_resource type="Texture2D" uid="uid://qyu2qkn1mfda" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="45_uwdjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kl2nh"]
-texture = ExtResource("1_iq2nv")
+texture = ExtResource("1_ucmor")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -62,7 +60,7 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73rxl"]
-texture = ExtResource("2_5dmkn")
+texture = ExtResource("2_vwq2o")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -75,7 +73,7 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6c37"]
-texture = ExtResource("3_afcmf")
+texture = ExtResource("3_0cyg8")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -88,7 +86,7 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86pjn"]
-texture = ExtResource("4_gjx12")
+texture = ExtResource("4_xl4nk")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -101,7 +99,7 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cu13p"]
-texture = ExtResource("5_3y4e3")
+texture = ExtResource("5_aeox8")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -114,7 +112,7 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krtyy"]
-texture = ExtResource("6_gipap")
+texture = ExtResource("6_j4hyl")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -127,14 +125,14 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2jv7"]
-texture = ExtResource("7_k6avn")
+texture = ExtResource("7_hk38j")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4tcpg"]
-texture = ExtResource("8_ib6ic")
+texture = ExtResource("8_42l68")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -147,12 +145,12 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tcvd"]
-texture = ExtResource("9_y7fry")
+texture = ExtResource("9_j63af")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4mm3"]
-texture = ExtResource("10_tihdc")
+texture = ExtResource("10_v58bk")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -172,7 +170,7 @@ sources/8 = SubResource("TileSetAtlasSource_7tcvd")
 sources/9 = SubResource("TileSetAtlasSource_c4mm3")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbvq"]
-texture = ExtResource("10_bgar0")
+texture = ExtResource("12_0hnqp")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -191,7 +189,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7100"]
-texture = ExtResource("11_csshk")
+texture = ExtResource("13_05fhs")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -297,63 +295,63 @@ texture_region_size = Vector2i(64, 64)
 8:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xvrff"]
-texture = ExtResource("12_rnbbo")
+texture = ExtResource("14_m3tqt")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ultjd"]
-texture = ExtResource("13_k0aod")
+texture = ExtResource("15_7w3i1")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxdto"]
-texture = ExtResource("14_n3nah")
+texture = ExtResource("16_7xeo4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7p4o"]
-texture = ExtResource("15_58g0f")
+texture = ExtResource("17_eqomj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_07qto"]
-texture = ExtResource("16_ubpfs")
+texture = ExtResource("18_yxfx4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsmh2"]
-texture = ExtResource("17_mnfbl")
+texture = ExtResource("19_mpkou")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxmn4"]
-texture = ExtResource("18_rch7k")
+texture = ExtResource("20_8cae4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r4bd4"]
-texture = ExtResource("19_e5dks")
+texture = ExtResource("21_sn1er")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e88ej"]
-texture = ExtResource("20_pje4t")
+texture = ExtResource("22_au4hh")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -363,7 +361,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tma82"]
-texture = ExtResource("21_8lda3")
+texture = ExtResource("23_5w56h")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -373,7 +371,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyjxi"]
-texture = ExtResource("22_fr331")
+texture = ExtResource("24_1mwnw")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -381,7 +379,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uwnr"]
-texture = ExtResource("23_hhqhc")
+texture = ExtResource("25_rtp7u")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -400,7 +398,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuvb0"]
-texture = ExtResource("24_rg85s")
+texture = ExtResource("26_ropy3")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -496,7 +494,7 @@ texture_region_size = Vector2i(64, 64)
 3:7/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlr25"]
-texture = ExtResource("25_crkhd")
+texture = ExtResource("27_duiuf")
 texture_region_size = Vector2i(64, 64)
 1:0/animation_separation = Vector2i(2, 0)
 1:0/animation_speed = 7.5
@@ -555,7 +553,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttw0d"]
-texture = ExtResource("26_awp5w")
+texture = ExtResource("28_t0mj2")
 margins = Vector2i(32, 32)
 texture_region_size = Vector2i(64, 64)
 15:0/0 = 0
@@ -593,7 +591,7 @@ texture_region_size = Vector2i(64, 64)
 0:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dhcv"]
-texture = ExtResource("27_rlw3v")
+texture = ExtResource("29_blxx5")
 texture_region_size = Vector2i(192, 192)
 0:0/animation_speed = 10.0
 0:0/animation_frame_0/duration = 1.0
@@ -607,42 +605,42 @@ texture_region_size = Vector2i(192, 192)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5gj0v"]
-texture = ExtResource("27_kw3jx")
+texture = ExtResource("30_qdnn6")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4va0n"]
-texture = ExtResource("28_xq0m3")
+texture = ExtResource("31_3gshy")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c41l6"]
-texture = ExtResource("29_327gm")
+texture = ExtResource("32_80p8o")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7301"]
-texture = ExtResource("30_ec1r0")
+texture = ExtResource("33_d3iow")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqskp"]
-texture = ExtResource("31_lg3xa")
+texture = ExtResource("34_qqi3j")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1nj7"]
-texture = ExtResource("32_nd2w2")
+texture = ExtResource("35_e42an")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -650,7 +648,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.5, -11, -4, -14.5, -0.5, -15, 6, -16, 13, -14, 16.5, -9.5, 19, -4, 20.5, 2.5, 19, 9, 11.5, 12, 6.5, 14, -3, 13, -11, 10, -15, 5, -17, -1.5, -13.5, -5.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mv7b"]
-texture = ExtResource("33_g7rsi")
+texture = ExtResource("36_w6xwj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -686,28 +684,58 @@ sources/23 = SubResource("TileSetAtlasSource_ttw0d")
 sources/24 = SubResource("TileSetAtlasSource_4dhcv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fist"]
-texture = ExtResource("41_2l83r")
+texture = ExtResource("37_sau8e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_edqms"]
-texture = ExtResource("41_2l83r")
+texture = ExtResource("37_sau8e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsygj"]
-texture = ExtResource("42_m1bip")
+texture = ExtResource("38_v7qtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_415d3"]
-texture = ExtResource("42_m1bip")
+texture = ExtResource("38_v7qtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ewodm"]
-texture = ExtResource("42_m1bip")
+texture = ExtResource("38_v7qtu")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiy36"]
+atlas = ExtResource("29_blxx5")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmg4y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiy36")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hh3lo"]
-texture = ExtResource("41_2l83r")
+texture = ExtResource("37_sau8e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkxkr"]
-texture = ExtResource("41_2l83r")
+texture = ExtResource("37_sau8e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkv8v"]
-texture = ExtResource("42_m1bip")
+texture = ExtResource("38_v7qtu")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq6tw"]
+atlas = ExtResource("45_uwdjj")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6gsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq6tw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -736,7 +764,7 @@ offset_top = 123.0
 offset_right = 610.0
 offset_bottom = 160.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Tideborn"
 horizontal_alignment = 1
@@ -783,7 +811,7 @@ scale = Vector2(1.5, 1.5)
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fist")
 theme_override_styles/hover = SubResource("StyleBoxTexture_edqms")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jsygj")
-script = ExtResource("36_4txen")
+script = ExtResource("39_45euw")
 
 [node name="QuitTitle" type="Label" parent="Buttons/Quit"]
 z_index = 1
@@ -793,7 +821,7 @@ offset_left = -68.4
 offset_top = 11.3333
 offset_right = 289.6
 offset_bottom = 48.3333
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 horizontal_alignment = 1
@@ -810,7 +838,7 @@ scale = Vector2(1.5, 1.5)
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fist")
 theme_override_styles/hover = SubResource("StyleBoxTexture_edqms")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_415d3")
-script = ExtResource("41_ak5j2")
+script = ExtResource("40_0tdbm")
 
 [node name="LevelTitle" type="Label" parent="Buttons/LevelSelect"]
 z_index = 1
@@ -820,7 +848,7 @@ offset_left = -68.4
 offset_top = 11.3333
 offset_right = 289.6
 offset_bottom = 48.3333
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Level Select"
 horizontal_alignment = 1
@@ -837,7 +865,7 @@ scale = Vector2(1.5, 1.5)
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fist")
 theme_override_styles/hover = SubResource("StyleBoxTexture_edqms")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_415d3")
-script = ExtResource("42_yfot3")
+script = ExtResource("41_ebr1l")
 
 [node name="HowToPlayTitle" type="Label" parent="Buttons/HowToPlay"]
 z_index = 1
@@ -847,7 +875,7 @@ offset_left = -68.4
 offset_top = 11.3333
 offset_right = 289.6
 offset_bottom = 48.3333
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "How To Play"
 horizontal_alignment = 1
@@ -862,7 +890,7 @@ scale = Vector2(1.5, 1.5)
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fist")
 theme_override_styles/hover = SubResource("StyleBoxTexture_edqms")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ewodm")
-script = ExtResource("40_fsk88")
+script = ExtResource("42_e54cu")
 
 [node name="CreditsTitle" type="Label" parent="Buttons/Credits"]
 z_index = 1
@@ -872,7 +900,7 @@ offset_left = -68.4
 offset_top = 11.3333
 offset_right = 289.6
 offset_bottom = 48.3333
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Credits"
 horizontal_alignment = 1
@@ -885,17 +913,17 @@ offset_top = 223.0
 offset_right = 632.0
 offset_bottom = 263.0
 
-[node name="Snapchat-2122017956" type="Sprite2D" parent="HowToPlay"]
-z_index = 10
-position = Vector2(-15, 75.5)
-scale = Vector2(0.32, 0.0997001)
-texture = ExtResource("43_o80fi")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HowToPlay"]
+z_index = 1
+position = Vector2(-27, 72)
+scale = Vector2(1.7, 1.7)
+sprite_frames = SubResource("SpriteFrames_bmg4y")
 
 [node name="Background3" type="Sprite2D" parent="HowToPlay"]
 z_index = 1
 position = Vector2(-264, 112)
 scale = Vector2(1.3, 1.2)
-texture = ExtResource("40_7rvgb")
+texture = ExtResource("43_y71td")
 
 [node name="Credits Text" type="Label" parent="HowToPlay/Background3"]
 z_index = 1
@@ -903,14 +931,21 @@ offset_left = -73.8461
 offset_top = -80.0
 offset_right = 73.1539
 offset_bottom = 71.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 15
+text = "To play the game you 
+need to highlight the
+unit/s you would like
+to control by dragging
+your cursor while
+holding the left mouse
+button. From there"
 
 [node name="Background4" type="Sprite2D" parent="HowToPlay"]
 z_index = 1
 position = Vector2(232, 112)
 scale = Vector2(1.3, 1.2)
-texture = ExtResource("40_7rvgb")
+texture = ExtResource("43_y71td")
 
 [node name="Credits Text" type="Label" parent="HowToPlay/Background4"]
 z_index = 1
@@ -918,8 +953,15 @@ offset_left = -73.8462
 offset_top = -80.0
 offset_right = 73.1538
 offset_bottom = 71.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 15
+text = "Right click and drag
+your mouse to create
+a red box which will 
+create the formations
+for your unit/s. The
+goal of the game is to
+ kil all enemy Goblins."
 
 [node name="BackButton2" type="Button" parent="HowToPlay"]
 z_index = 3
@@ -931,13 +973,13 @@ offset_bottom = 224.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_hh3lo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nkxkr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_lkv8v")
-script = ExtResource("44_7qsna")
+script = ExtResource("44_yeye1")
 
 [node name="BackButtonText" type="Label" parent="HowToPlay/BackButton2"]
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 horizontal_alignment = 1
@@ -955,7 +997,7 @@ offset_bottom = 263.0
 z_index = 1
 position = Vector2(-264, 112)
 scale = Vector2(1.3, 1.2)
-texture = ExtResource("40_7rvgb")
+texture = ExtResource("43_y71td")
 
 [node name="Credits Text" type="Label" parent="Credits/Background"]
 z_index = 1
@@ -963,7 +1005,7 @@ offset_left = -73.8461
 offset_top = -80.0
 offset_right = 73.1539
 offset_bottom = 71.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 15
 text = "The Game is made by 
 Meko Hardinge. I got
@@ -977,7 +1019,7 @@ feedback"
 z_index = 1
 position = Vector2(232, 112)
 scale = Vector2(1.3, 1.2)
-texture = ExtResource("40_7rvgb")
+texture = ExtResource("43_y71td")
 
 [node name="Credits Text" type="Label" parent="Credits/Background2"]
 z_index = 1
@@ -985,7 +1027,7 @@ offset_left = -73.8462
 offset_top = -80.0
 offset_right = 73.1538
 offset_bottom = 71.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 15
 text = "The assets for this
 game was Tiny Swords
@@ -1005,34 +1047,23 @@ offset_bottom = 224.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_hh3lo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nkxkr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_lkv8v")
-script = ExtResource("44_7qsna")
+script = ExtResource("44_yeye1")
 
 [node name="BackButtonText" type="Label" parent="Credits/BackButton"]
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("37_131tx")
+theme_override_fonts/font = ExtResource("11_e7pd2")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Img4747" type="Sprite2D" parent="Credits"]
-z_index = 10
-position = Vector2(-78, 72.5)
-scale = Vector2(0.0983885, 0.109756)
-texture = ExtResource("46_5g6kt")
-
-[node name="Baby Joker" type="Sprite2D" parent="Credits"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Credits"]
 z_index = 1
-position = Vector2(44, 74.4999)
-scale = Vector2(0.8, 1.03333)
-texture = ExtResource("41_p87bh")
-
-[node name="Img4747" type="Sprite2D" parent="."]
-position = Vector2(1317.25, 338)
-scale = Vector2(0.153944, 0.553802)
-texture = ExtResource("46_5g6kt")
+position = Vector2(-15.9999, 74)
+scale = Vector2(1.7, 1.7)
+sprite_frames = SubResource("SpriteFrames_w6gsh")
 
 [connection signal="button_down" from="Buttons/Quit" to="Buttons/Quit" method="_on_button_down"]
 [connection signal="button_up" from="Buttons/Quit" to="Buttons/Quit" method="_on_button_up"]

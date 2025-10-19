@@ -39,22 +39,31 @@ var target_position: Vector2 = Vector2.ZERO
 var current_spacing: float
 var _summary_timer: float = 0.0
 
+# Formation rect storage (fixes form_to_rect errors)
+var last_formation_rect: Rect2 = Rect2()
+
+# AI-facing properties (exposed for other systems)
+var average_position: Vector2 = Vector2.ZERO
+var unit_count: int = 0
+
 const MAX_TARGET_DISTANCE: float = 10000.0
 
 func _ready() -> void:
 	add_to_group("unit_controller")
 	for child in get_children():
 		if child is CharacterBody2D:
-			knights.append(child)
+			if is_instance_valid(child) and child.is_inside_tree():
+				knights.append(child)
 	current_spacing = spacing * hold_spacing_mul
 	if debug:
 		print("[AI][", formation_id, "] ready — knights:", knights.size(), " base_spacing:", spacing)
 
 func _process(delta: float) -> void:
+	_cleanup_dead_knights()
+
 	_decision_timer += delta
 	_summary_timer += delta
 
-	# smooth spacing toward target each frame
 	var target_spacing: float = _get_spacing_for_state(state)
 	current_spacing = lerp(current_spacing, target_spacing, clamp(spacing_lerp_speed * delta, 0.0, 1.0))
 
@@ -62,14 +71,12 @@ func _process(delta: float) -> void:
 		_decision_timer = 0.0
 		_ai_decide_action()
 
-	# occasional high-level summary (non-spam)
 	if debug and _summary_timer >= debug_summary_interval:
 		_summary_timer = 0.0
 		_debug_summary()
 
 	_move_knights_to_target()
 
-# Choose multiplier based on current state
 func _get_spacing_for_state(s: String) -> float:
 	if s == "ADVANCE":
 		return spacing * advance_spacing_mul
@@ -77,21 +84,19 @@ func _get_spacing_for_state(s: String) -> float:
 		return spacing * flank_spacing_mul
 	if s == "RETREAT":
 		return spacing * retreat_spacing_mul
-	# HOLD or default
 	return spacing * hold_spacing_mul
 
-# compute formation center from knights (global positions)
 func _compute_formation_center() -> Vector2:
 	var c: Vector2 = Vector2.ZERO
 	var cnt: int = knights.size()
 	if cnt == 0:
 		return global_position
 	for k in knights:
-		c += k.global_position
+		if is_instance_valid(k):
+			c += k.global_position
 	return c / float(max(1, cnt))
 
 func _ai_decide_action() -> void:
-	# gather candidate player formations with valid data
 	var player_formations: Array = []
 	for ctrl in get_tree().get_nodes_in_group("unit_controller"):
 		if ctrl == self:
@@ -109,7 +114,6 @@ func _ai_decide_action() -> void:
 			print("[AI][", formation_id, "] no player formations -> HOLD | center:", _vecp(target_position))
 		return
 
-	# find closest player formation (by average_position)
 	var closest: Node = null
 	var closest_dist: float = INF
 	var my_center: Vector2 = _compute_formation_center()
@@ -130,7 +134,6 @@ func _ai_decide_action() -> void:
 
 	target_formation = closest
 
-	# safe reads
 	var enemy_count: int = 0
 	if "unit_count" in target_formation:
 		enemy_count = int(target_formation.unit_count)
@@ -141,7 +144,6 @@ func _ai_decide_action() -> void:
 
 	var player_center: Vector2 = target_formation.average_position
 
-	# guard invalid player_center
 	if not _is_valid_point(player_center):
 		_set_state("HOLD")
 		target_position = my_center
@@ -149,7 +151,6 @@ func _ai_decide_action() -> void:
 			print("[AI][", formation_id, "] invalid player_center -> HOLD")
 		return
 
-	# Decision rules
 	if own_count < enemy_count * retreat_ratio:
 		_set_state("RETREAT")
 		var away_dir: Vector2 = (my_center - player_center).normalized()
@@ -167,7 +168,6 @@ func _ai_decide_action() -> void:
 		var perp: Vector2 = Vector2(-dir.y, dir.x)
 		if randi() % 2 == 0:
 			perp *= -1
-		# increase flank distance slightly based on unit count (bigger groups → wider flank)
 		var dynamic_flank: float = flank_distance + clamp(float(own_count - 4) * 6.0, 0.0, 200.0)
 		target_position = player_center + perp * dynamic_flank
 		_safe_finalize_target_and_print("FLANK", player_center, closest_dist, own_count, enemy_count, in_combat, my_center, target_position)
@@ -175,7 +175,6 @@ func _ai_decide_action() -> void:
 
 	if closest_dist > engagement_distance:
 		_set_state("ADVANCE")
-		# advance directly to player center (fine for now)
 		target_position = player_center
 		_safe_finalize_target_and_print("ADVANCE", player_center, closest_dist, own_count, enemy_count, in_combat, my_center, target_position)
 		return
@@ -184,7 +183,6 @@ func _ai_decide_action() -> void:
 	target_position = my_center
 	_safe_finalize_target_and_print("HOLD", player_center, closest_dist, own_count, enemy_count, in_combat, my_center, target_position)
 
-# ensure target sane, clamp if needed, and print one compact line
 func _safe_finalize_target_and_print(decision: String, player_center: Vector2, dist: float, own_count: int, enemy_count: int, in_combat: bool, my_center: Vector2, tgt: Vector2) -> void:
 	if not _is_valid_point(tgt):
 		target_position = my_center
@@ -200,7 +198,6 @@ func _safe_finalize_target_and_print(decision: String, player_center: Vector2, d
 	if debug:
 		_print_decision_compact(decision, player_center, dist, own_count, enemy_count, in_combat, my_center, target_position)
 
-# compact decision print including spacing info
 func _print_decision_compact(decision: String, player_center: Vector2, dist: float, own_count: int, enemy_count: int, in_combat: bool, my_center: Vector2, tgt: Vector2) -> void:
 	prev_state = state
 	var pid: String = "unknown"
@@ -215,18 +212,18 @@ func _print_decision_compact(decision: String, player_center: Vector2, dist: flo
 	s += " | player_center=" + _vecp(player_center)
 	s += " | tgt=" + _vecp(tgt)
 	print(s)
-	# sample knight positions (up to 3) to check nav snapping
 	var sample_n: int = min(3, knights.size())
 	for i in range(sample_n):
-		var kp: Vector2 = knights[i].global_position
-		print("[AI][" + formation_id + "] knight[" + str(i) + "] pos=" + _vecp(kp) + " -> assigned_preview_index=" + str(i))
+		if is_instance_valid(knights[i]):
+			var kp: Vector2 = knights[i].global_position
+			print("[AI][" + formation_id + "] knight[" + str(i) + "] pos=" + _vecp(kp) + " -> assigned_preview_index=" + str(i))
 
 func _move_knights_to_target() -> void:
+	_cleanup_dead_knights()
 	if knights.size() == 0:
 		return
 
 	var cnt: int = knights.size()
-	# compute formation rectangle using current_spacing (smoothed)
 	var spacing_used: float = max(1.0, current_spacing)
 	var formation_width: float = max(spacing_used, spacing_used * sqrt(cnt))
 	var formation_height: float = max(spacing_used, spacing_used * ceil(cnt / float(max(1, int(sqrt(max(1, cnt)))))))
@@ -247,13 +244,75 @@ func _move_knights_to_target() -> void:
 		var row_width: float = units_this_row * cell_w
 		var start_x: float = formation_rect.position.x + (formation_rect.size.x - row_width) * 0.5
 		for col in range(units_this_row):
+			if i >= knights.size():
+				break
+			var unit = knights[i]
+			if not is_instance_valid(unit) or not unit.is_inside_tree():
+				knights.remove_at(i)
+				cnt = knights.size()
+				i -= 1
+				continue
+
 			var pos: Vector2 = Vector2(
 				start_x + col * cell_w + cell_w * 0.5,
 				formation_rect.position.y + row * cell_h + cell_h * 0.5
 			)
-			knights[i].set_target_position(pos)
+
+			if unit.has_method("set_target_position"):
+				unit.set_target_position(pos)
+			elif "formation_target" in unit:
+				unit.formation_target = pos
 			i += 1
 
+# ---------------------------------------------------------------------
+# NEW: allow external callers (selection/formation tool) to set a rectangle
+# ---------------------------------------------------------------------
+func form_to_rect(rect: Rect2) -> void:
+	_cleanup_dead_knights()
+
+	var cnt: int = knights.size()
+	if cnt == 0:
+		last_formation_rect = rect
+		return
+
+	last_formation_rect = rect
+
+	var grid: Vector2i = get_grid_by_rect(cnt, rect.size)
+	var cols: int = grid.x
+	var rows: int = grid.y
+	var cell_w: float = rect.size.x / float(max(1, cols))
+	var cell_h: float = rect.size.y / float(max(1, rows))
+
+	var i: int = 0
+	for row in range(rows):
+		var units_this_row: int = min(cols, cnt - i)
+		var row_width: float = units_this_row * cell_w
+		var start_x: float = rect.position.x + (rect.size.x - row_width) * 0.5
+		for col in range(units_this_row):
+			if i >= knights.size():
+				break
+			var unit = knights[i]
+			if not is_instance_valid(unit) or not unit.is_inside_tree():
+				knights.remove_at(i)
+				cnt = knights.size()
+				i -= 1
+				continue
+
+			var target_pos: Vector2 = Vector2(
+				start_x + col * cell_w + cell_w * 0.5,
+				rect.position.y + row * cell_h + cell_h * 0.5
+			)
+
+			if is_instance_valid(unit) and unit.is_inside_tree():
+				if unit.has_method("set_target_position"):
+					unit.set_target_position(target_pos)
+				elif "formation_target" in unit:
+					unit.formation_target = target_pos
+			i += 1
+
+# --------------------
+# Debug / helpers
+# --------------------
 func _debug_summary() -> void:
 	if not debug:
 		return
@@ -269,7 +328,6 @@ func _debug_summary() -> void:
 			nearby += 1
 	print("[AI][" + formation_id + "] nearby_player_formations=" + str(nearby))
 
-# helpers
 func _is_valid_point(p: Vector2) -> bool:
 	if p == null:
 		return false
@@ -292,7 +350,6 @@ func _set_state(new_state: String) -> void:
 	prev_state = state
 	state = new_state
 
-# get_grid_by_rect (unchanged algorithm from your code)
 func get_grid_by_rect(unit_count: int, size: Vector2) -> Vector2i:
 	if size == Vector2.ZERO or unit_count == 0:
 		return Vector2i(1, unit_count)
@@ -311,3 +368,19 @@ func get_grid_by_rect(unit_count: int, size: Vector2) -> Vector2i:
 			best_cols = cols
 			best_rows = rows
 	return Vector2i(best_cols, best_rows)
+
+func on_unit_died(unit: Node) -> void:
+	for i in range(knights.size() - 1, -1, -1):
+		if knights[i] == unit:
+			knights.remove_at(i)
+			if debug:
+				print("[AI][" + formation_id + "] on_unit_died removed dead unit:", unit.name)
+			break
+
+func _cleanup_dead_knights() -> void:
+	for i in range(knights.size() - 1, -1, -1):
+		var k = knights[i]
+		if not is_instance_valid(k) or not k.is_inside_tree():
+			if debug:
+				print("[AI][" + formation_id + "] cleaning dead/invalid unit at index", i)
+			knights.remove_at(i)
