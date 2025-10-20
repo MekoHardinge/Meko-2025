@@ -725,7 +725,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ydvo"]
 radius = 25.0
-height = 50.0
+height = 80.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1ljs"]
 radius = 66.0681
@@ -739,6 +739,8 @@ script = ExtResource("1_arygf")
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_7yotu")
 animation = &"Walk"
+frame = 3
+frame_progress = 0.593849
 
 [node name="Label" type="Label" parent="."]
 offset_left = -8.0
@@ -760,13 +762,13 @@ max_neighbors = 12
 max_speed = 100.6
 debug_enabled = true
 debug_use_custom = true
-debug_path_custom_color = Color(0, 0.443137, 0.901961, 1)
+debug_path_custom_color = Color(0.21392, 0.542481, 0.948797, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, 11)
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_0ydvo")
 
 [node name="AttackRange" type="Area2D" parent="."]
